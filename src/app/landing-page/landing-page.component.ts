@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -7,9 +9,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  bars:number[] = [5];
+  i=0
+  
+
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
+    let i =0;
+     this.repeat();
+    
+
   }
 
+   repeat():void{
+    if (this.i > 70) return;
+    setTimeout(() =>{
+      this.i++
+      this.buildBars();
+      this.repeat();
+    }, 1);
+  }
+
+
+  buildBars():void{
+    for(let j = 1; j < 14 ; j++)
+    {
+      this.bars[j]= j*this.i*0.6
+      console.log(this.bars[j])
+    }
+  }
+
+  goToMain():void{
+  this.route.navigate(['main']);
+  }
 }
