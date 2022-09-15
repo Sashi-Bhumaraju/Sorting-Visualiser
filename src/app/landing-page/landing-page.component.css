@@ -26,11 +26,16 @@ h6{
     color: #3e3e42;
 }
 
+tr{
+   
+}
 table
 {
+   
     
+    /* vertical-align: bottom; */
      /* background-color: red; */
-  margin-right: 25%;
+  margin-right: auto;
   margin-left: auto;
   /* margin-right: 20rem; */
   /*    float: right; */
