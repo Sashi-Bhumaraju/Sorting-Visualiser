@@ -5,8 +5,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
+  
   {
-
     path:'',
     redirectTo:'get-started',
     pathMatch:'full'
