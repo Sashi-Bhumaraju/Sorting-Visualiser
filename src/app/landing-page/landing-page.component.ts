@@ -35,7 +35,7 @@ export class LandingPageComponent implements OnInit {
   buildBars():void{
     for(let j = 1; j < 14 ; j++)
     {
-      this.bars[j]= j*this.i*0.6
+      this.bars[j]= j*this.i*0.4
       console.log(this.bars[j])
     }
   }

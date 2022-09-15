@@ -28,9 +28,12 @@ h6{
 
 table
 {
+    
+     /* background-color: red; */
+  margin-right: 25%;
   margin-left: auto;
-  margin-right: 20rem;
-  float: right;
+  /* margin-right: 20rem; */
+  /*    float: right; */
 }
 
 
@@ -42,7 +45,6 @@ table
     height: 350px;
     background-color: black;
     margin-top: 7rem;
-
     margin-right: 5rem;
 }
 
@@ -50,6 +52,15 @@ table
 /* left side bars...... */
 .left
 {
+    text-align: right;
+    float: right;
+   
+   justify-content: space-around;
+   
+    
+    align-content: flex-end;
+    align-items: flex-end;
+    
     margin-top: 4rem;
     padding-top: 4rem;
     margin-right: 0rem;
@@ -57,18 +68,14 @@ table
 
 .bar
 {
-       
+      
 
     height: 20px;
     background-color: black;
     margin-bottom: 3px;
-    /* float: left; */
     float: right;
-    align-items: right;
     margin-left: auto;
     margin-right: auto;
-    flex: auto;
-   
 
 }
 
