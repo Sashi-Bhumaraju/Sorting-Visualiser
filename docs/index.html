@@ -10,7 +10,7 @@
 <script src="runtime.810c12be0ec93cb6.js" type="module">
   if (window.location.hash.length > 1) {
     const path = window.location.hash.replace('#', '')
-    history.pushState({ page: 1 }, "Some title", '/static-dynamic-routing' + path)
+    history.pushState({ page: 1 }, "Some title", '/get-started' + path)
 
     document.getElementById('header').innerHTML = document.getElementById('header').innerHTML.replace('{PATH}', path)
   }
