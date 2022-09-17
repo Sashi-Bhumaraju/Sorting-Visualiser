@@ -11,7 +11,9 @@
     font-weight: bold;
     margin-top: 5rem;
     font-size: 20px;
+    background-color: #f2eecb;
     
+   
 }
 
 h1{
@@ -19,6 +21,7 @@ h1{
     font-weight: 900;
     width: 300px;
     font-size: 60px;
+    color: darkmagenta;
 }
 h6{
     margin-top: 5rem;
@@ -31,12 +34,15 @@ tr{
 }
 table
 {
-   
+    /* font-family: 'VT323', monospace; */
+    font-family: 'Azeret Mono', monospace;
     
     /* vertical-align: bottom; */
      /* background-color: red; */
   margin-right: auto;
   margin-left: auto;
+  float: right;
+  margin-right: 25%;
   /* margin-right: 20rem; */
   /*    float: right; */
 }

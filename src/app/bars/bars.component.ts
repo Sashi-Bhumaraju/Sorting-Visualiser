@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BarNode } from 'models/BarNode';
+import { BarNodeArray } from 'models/BarNodeArray';
+import { from } from 'rxjs';
+import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 
 @Component({
   selector: 'app-bars',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BarsComponent implements OnInit {
 
+   bars:BarNode[]=BarNodeArray;
+
   constructor() { }
 
   ngOnInit(): void {
+    GenerateBarNodeArray.build();
+    from(GenerateBarNodeArray.build()).subscribe(()=>{
+      this.bars=BarNodeArray;
+    });
   }
-
 }

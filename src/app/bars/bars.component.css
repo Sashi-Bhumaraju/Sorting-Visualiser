@@ -1,0 +1,30 @@
+.barsArea
+{
+    width:100%;
+    height: 100%;
+}
+
+.bar{
+
+    width: 14px;
+    background-color:cadetblue;
+    margin-left: 1px;
+}
+
+td {
+    vertical-align: top;
+  }
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px
+}  
+
+.h-bar
+{
+    height: 2px;
+    width: 73rem;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
