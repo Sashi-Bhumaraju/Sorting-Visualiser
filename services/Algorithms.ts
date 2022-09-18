@@ -58,7 +58,9 @@ export class Algorithms{
             return 
             
            }
-         
+        //  kkkk
+        // this is sample
+        // no worries
           j++;
           repeat();
         },1)
