@@ -1,18 +1,18 @@
 
-<nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" (click)="goToOpeningPage()"  >Sorting Visualiser</a>
+<nav class="navbar navbar-expand-lg navbar-light  ">
+
+
+
+    <a class="navbar-brand" (click)="goToOpeningPage()"  >Sorting-Visualiser</a>
     <div class="header-divider"></div>
     
-    <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">Build New Array </div>
+    <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">New Array </div>
     <div class="header-divider"></div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto">
-
-
         <li class="nav-item active">
           <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black'}" (click)="mergeSort()">Merge Sort</div>
-        
         </li>
         <li class="nav-item active">
           <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black'}" (click)="quickSort()">Quick Sort</div>
@@ -23,16 +23,13 @@
         <li class="nav-item active">
           <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black'}" (click)="insertionSort()">Insertion Sort</div>
         </li>
-       <li>
-       
-       </li>
       </ul>
     </div>
-    <!-- <div class="  bg-light rounded-pill" >Sort!</div> -->
-   
         <img class="circular_image  "  *ngIf="default[0].isRunning" src = "https://cdn-icons-png.flaticon.com/512/7958/7958854.png" alt = "sort" />
-    
-     
+
+
+
+        
   </nav>
   
   <div *ngIf="showToast" class="user-toast" >

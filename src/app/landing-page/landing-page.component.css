@@ -63,6 +63,7 @@ table
 /* left side bars...... */
 .left
 {
+    margin-left: 1rem;
     text-align: right;
     float: right;
    

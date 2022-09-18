@@ -8,7 +8,7 @@ export class GenerateBarNodeArray{
     {
       
         BarNodeArray.length=0;
-        for(let i=0; i<60;i++)
+        for(let i=0; i<55;i++)
         BarNodeArray.push({height:Math.floor((Math.random() * 480) + 50),color:''});
         return BarNodeArray   
     }

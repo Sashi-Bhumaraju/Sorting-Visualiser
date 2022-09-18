@@ -1,28 +1,38 @@
 .navbar-brand
 {
+
    
     font-weight: 900;
     /* font-size: 25px; */
-    margin-left: 1rem;
+    /* margin-left: 14rem; */
     cursor: grab;
     color:darkmagenta;
+   
   
 }
 .navbar
 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+ 
+ 
+    padding-left: 15%;
+    padding-right: auto;
+    box-sizing: border-box;
 
-    
-    box-shadow: 0px 0px 1px #888888;
+    box-shadow: 0px 0px 2px #888888;
     /* font-family: 'VT323', monospace; */
     font-family: 'Azeret Mono', monospace;
-    background-color:white;
+   
     height: 75px;
     
 }
 .header-divider
 {
-    margin-left: 11.5%;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 2.5rem;
     /* background-color: black; */
     width: 2px;
     height: 2rem;
@@ -38,8 +48,8 @@
 .sortType
 {
     cursor: pointer;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 0.8rem;
     color: black;
     font-weight: 600;
     font-size: 13.5px;
@@ -143,6 +153,4 @@
    margin-top: 3px;
     font-size: 12px;
   }
-  
-
   
