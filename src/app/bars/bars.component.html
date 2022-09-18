@@ -3,7 +3,7 @@
     <table>
         <tr>
     <td *ngFor="let bar of bars">
-        <div class="bar" [ngStyle]="{'height.px':bar.height}"></div>
+        <div class="bar" [ngStyle]="{'height.px':bar.height , 'background-color': bar.color=='N'? 'cadetblue': bar.color=='G'? '#90ee90 ':'#FFC0CB'}"></div>
     </td>
 </tr>
 

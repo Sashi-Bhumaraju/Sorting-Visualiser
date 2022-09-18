@@ -10,7 +10,7 @@
    
   
 }
-.navbar
+.main
 {
   display: flex;
   justify-content: center;
@@ -18,8 +18,7 @@
  
  
  
-    padding-left: 15%;
-    padding-right: auto;
+   
     box-sizing: border-box;
 
     box-shadow: 0px 0px 2px #888888;
@@ -31,8 +30,8 @@
 }
 .header-divider
 {
-    margin-left: 0.5rem;
-    margin-right: 2.5rem;
+    margin-left: 0.0rem;
+    margin-right: 0.0rem;
     /* background-color: black; */
     width: 2px;
     height: 2rem;
@@ -40,8 +39,9 @@
 
 .buildNewArray
 {
-  
-    font-size: 13.5px;
+  margin-left: 0.6rem;
+  margin-right: 2rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -49,7 +49,7 @@
 {
     cursor: pointer;
     margin-left: 1.5rem;
-    margin-right: 0.8rem;
+    margin-right: 0.5rem;
     color: black;
     font-weight: 600;
     font-size: 13.5px;
@@ -77,50 +77,6 @@
     /* background-color: black; */
 }
 
-.circular_image {
-
-
-    color: black;
-    font-size: 13.5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    display: inline-block;
-    position: relative;
-    font-family: 'Merriweather', serif;
-    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-    -webkit-mask-size: 200%;
-    animation: shine 0.3s linear infinite;
-    /* box-shadow: 0px 0px 1px #888888; */
-    width: 28px;
-    height: 28px;
-    border-radius: 5%;
-    overflow: hidden;
-    cursor: pointer;
-    margin-right: 1rem;
-
-    
-    /* background-color:#f2eecb    ; */
-    /* commented for demo
-    float: left;
-    margin-left: 125px;
-    margin-top: 20px;
-    */
-    /*for demo*/
-  
-    display:inline-block;
-    vertical-align:middle;
-  }
-  .circular_image img{
-    width:100%;
-  }
-  
-  
-  
-  @keyframes shine {
-    from { -webkit-mask-position: 150%; }
-    to { -webkit-mask-position: -50%; }
-  }
 
   .user-toast
   {
@@ -154,3 +110,42 @@
     font-size: 12px;
   }
   
+  .circular_image {
+
+    /* position:absolute;
+    margin-left:  calc(100vw - 55px);
+    margin-top: 3px; */
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 0.3s linear infinite;
+        width: 30px;
+        height: 30px;
+        cursor: progress;
+      }
+      .circular_image img{
+      
+        
+        /* width:100%; */
+      }
+      
+      
+      
+      @keyframes shine {
+        from { -webkit-mask-position: 150%; }
+        to { -webkit-mask-position: -50%; }
+      }
+   .card
+   {
+    
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    /* margin-left:  20rem; */
+    margin-top: 0px;
+    
+   }
+   .card-body
+   {
+    margin: 0px;
+    padding: 8px;
+   }

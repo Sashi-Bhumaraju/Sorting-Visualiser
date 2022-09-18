@@ -15,6 +15,10 @@ export class Algorithms{
       let  i:number = 0;
        let j:number = 1;
        let l:number = BarNodeArray.length;
+
+       let prevI:number=0;
+       let prevJ:number=1;
+
        (function repeat(){
         // console.log("inside reat"+l)
         setTimeout(()=>
@@ -23,6 +27,18 @@ export class Algorithms{
             i++;
             j=i+1;
         }   
+
+        BarNodeArray[prevI].color = 'N';
+        BarNodeArray[i].color = 'G';
+        prevI = i;
+         console.log(i+'-----------')
+         console.log(j+'-----------')
+
+         BarNodeArray[prevJ].color = 'N';
+         BarNodeArray[j].color = 'R';
+         prevJ = j;
+
+
            if(BarNodeArray[j].height < BarNodeArray[i].height)
            {
             // console.log("inside timeout + j"+j)
@@ -32,6 +48,8 @@ export class Algorithms{
            }
            if(i==l-2 && j==l-1)
            {
+
+            BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
             SetDefault.push({
                 isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,

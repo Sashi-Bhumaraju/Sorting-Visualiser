@@ -42,7 +42,7 @@ table
   margin-right: auto;
   margin-left: auto;
   float: right;
-  margin-right: 25%;
+  /* margin-right: 25%; */
   /* margin-right: 20rem; */
   /*    float: right; */
 }
@@ -63,7 +63,6 @@ table
 /* left side bars...... */
 .left
 {
-    margin-left: 1rem;
     text-align: right;
     float: right;
    
@@ -92,3 +91,8 @@ table
 }
 
 
+.centering
+{
+    background-color: red;
+    width: 64rem;
+}
