@@ -17,7 +17,7 @@ export class BarsComponent implements OnInit {
 
   ngOnInit(): void {
     GenerateBarNodeArray.build();
-    from(GenerateBarNodeArray.build()).subscribe(()=>{
+    from(BarNodeArray).subscribe(()=>{
       this.bars=BarNodeArray;
     });
   }

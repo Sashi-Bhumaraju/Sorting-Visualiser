@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { Deafault } from 'models/Deafault';
+import { SetDefault } from 'models/SetDefault';
+import { from, of } from 'rxjs';
+import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 
 @Component({
@@ -8,18 +11,25 @@ import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
-  isBuildNewArray:boolean=false;
-  isMergeSort:boolean=false;
-  isQuickSort :boolean=false;
-  isInsertionSort:boolean=false;
-  isBubbleSort:boolean=false;
-  isRunning:boolean=false;
+  default:Deafault[]=SetDefault;
+  showToast:boolean=false
 
-  constructor(private router:Router, private toastr: ToastrService) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  
+    
+    from(SetDefault).subscribe((v)=>{
+    console.log("inside setdeafault"+v.isBubbleSort)
+    this.default = SetDefault;
+
+    }); 
+   
+
+    
   }
 
 
@@ -28,43 +38,49 @@ export class HeaderComponent implements OnInit {
   }
 
   buildNewArray():void{
-
-    GenerateBarNodeArray.build()
-    
-    if(   this.isMergeSort == true ||   this.isQuickSort == true ||  this.isInsertionSort == true ||  this.isBubbleSort == true)
+    if( this.default[0].isRunning)
       {
-
+        this.showToast=true
+        setTimeout(()=>{ this.showToast=false},2500);
       }
     else {
-              this.isRunning=true
-              setTimeout(()=>{ this.isRunning=false;},2500);
+            GenerateBarNodeArray.build()    
       }
-
   }
+
 
   mergeSort():void{
-    this.isBuildNewArray =true;
-    this.isMergeSort= true;
-
+    if( !this.default[0].isRunning)
+    {
+      this.default[0].isRunning=true
+      this.default[0].isMergeSort= true;
+    }
   }
+
 
   quickSort():void{
-    this.isBuildNewArray = true;
-    this.isQuickSort = true;
-
+    if( !this.default[0].isRunning)
+    {
+      this.default[0].isRunning=true
+      this.default[0].isQuickSort = true;
+    }
   }
   
-  insertionSort():void{
-    this.isBuildNewArray = true
-    this.isInsertionSort = true;
 
+  insertionSort():void{
+    if( !this.default[0].isRunning)
+    {
+      this.default[0].isRunning=true
+      this.default[0].isInsertionSort = true;
+    }
   }
 
   bubbleSort():void{
-    this.isBuildNewArray =true
-    this.isBubbleSort = true;
-
-
-  }
-
+    if( !this.default[0].isRunning)
+    {
+      this.default[0].isRunning=true
+      this.default[0].isBubbleSort = true;
+      Algorithms.bubbleSort();
+    }
+ }
 }
