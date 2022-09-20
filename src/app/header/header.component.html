@@ -1,47 +1,22 @@
-<nav class="navbar navbar-expand-lg navbar-light main ">
-<nav class="navbar navbar-expand-lg navbar-light centering ">
 
 
-
-    <a class="navbar-brand" (click)="goToOpeningPage()"  >Sorting-Visualiser</a>
-    <div class="header-divider"></div>
-    
-    <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">New Array </div>
-    <div class="header-divider"></div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black'}" (click)="mergeSort()">Merge-Sort</div>
-          <!-- <div class="card"   *ngIf="default[0].isRunning" style="position: absolute;">
-  
-            <div class="card-body">
-              <img class="circular_image  "  *ngIf="default[0].isRunning" src = "https://cdn-icons-png.flaticon.com/512/7958/7958854.png" alt = "sort" />
-          
-            </div>
-          </div> -->
-        </li>
-        <li class="nav-item active">
-          <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black'}" (click)="quickSort()">Quick-Sort</div>
-        </li>
-        <li class="nav-item active">
-          <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black'}" (click)="bubbleSort()">Bubble-Sort</div>
-          
-        </li>
-        <li class="nav-item active">
-          <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black'}" (click)="insertionSort()">Insertion-Sort</div>
-        </li>
-      </ul>
+    <div class="header-bar">
+      <table>
+        <tr>
+          <td>  <div class="logo" (click)="goToOpeningPage()">Sorting-Visualiser</div></td>
+          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">New Array </div>
+          </td>
+          <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black'}" (click)="mergeSort()">Merge-Sort</div>
+          </td>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black'}" (click)="quickSort()">Quick-Sort</div>
+          </td>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black'}" (click)="bubbleSort()">Bubble-Sort</div>
+          </td>
+          <td>  <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black'}" (click)="insertionSort()">Insertion-Sort</div>
+          </td>
+        </tr>
+      </table>
     </div>
-
-
-
-        
-  </nav>
-
-
-</nav>
-
 
   <div *ngIf="showToast" class="user-toast" >
     <div class="user-toast-header">

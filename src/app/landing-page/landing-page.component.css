@@ -41,7 +41,8 @@ table
      /* background-color: red; */
   margin-right: auto;
   margin-left: auto;
-  float: right;
+
+  /* float: right; */
   /* margin-right: 25%; */
   /* margin-right: 20rem; */
   /*    float: right; */
@@ -91,8 +92,3 @@ table
 }
 
 
-.centering
-{
-    background-color: red;
-    width: 64rem;
-}
