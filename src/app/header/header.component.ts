@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
+import { Tip } from 'models/ShowTip';
 import { Speed } from 'models/Speed';
+// import { ShowTip } from 'models/ShowTip';
 import { from, of } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
@@ -17,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
   default:Deafault[]=SetDefault;
   showToast:boolean=false
-
+showTip:boolean[]=Tip;
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -28,9 +30,10 @@ export class HeaderComponent implements OnInit {
     this.default = SetDefault;
 
     }); 
-   
 
-    
+    from(Tip).subscribe(()=>{
+      this.showTip=Tip
+    })
   }
 
 
@@ -92,5 +95,10 @@ export class HeaderComponent implements OnInit {
        Speed.length=0
        Speed.push(v)
       
+ }
+
+ stopTip():void{
+  Tip.length=0;
+  Tip.push(false)
  }
 }

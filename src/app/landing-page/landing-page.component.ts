@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Tip } from 'models/ShowTip';
 
 
 @Component({
@@ -42,5 +43,7 @@ export class LandingPageComponent implements OnInit {
 
   goToMain():void{
   this.open=false
+  Tip.length=0
+  Tip.push(true)
   }
 }

@@ -36,4 +36,13 @@
 
 
 
- 
+  <div class="tip"  *ngIf="showTip[0]">
+    <table style="margin: 0; padding:0">
+      <tr style="margin: 0; padding:0">
+        Increse or decrese speed of algorithm by using range bar.
+      </tr>
+      <tr>
+        <div (click)="stopTip()" class="buttonU">Got it </div>
+      </tr>
+    </table>
+  </div>

@@ -1,0 +1,1 @@
+export let Tip:boolean[]=[false];
