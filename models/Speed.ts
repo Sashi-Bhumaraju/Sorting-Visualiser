@@ -1,0 +1,1 @@
+export let Speed:number[]=[10];

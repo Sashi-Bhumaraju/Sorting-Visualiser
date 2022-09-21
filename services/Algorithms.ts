@@ -1,9 +1,11 @@
+import { formatDate } from "@angular/common";
 import { BarNodeArray } from "models/BarNodeArray"
 import { SetDefault } from "models/SetDefault";
+import { Speed } from "models/Speed";
+import { from } from "rxjs";
 import { HeaderComponent } from "src/app/header/header.component";
 
 export class Algorithms{
-
 
 
 
@@ -63,7 +65,7 @@ export class Algorithms{
         // no worries
           j++;
           repeat();
-        },1)
+        },Speed[0])
        })();
        
       

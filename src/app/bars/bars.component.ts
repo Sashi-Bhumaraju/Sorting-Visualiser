@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BarNode } from 'models/BarNode';
 import { BarNodeArray } from 'models/BarNodeArray';
 import { from } from 'rxjs';
@@ -11,9 +12,8 @@ import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 })
 export class BarsComponent implements OnInit {
 
-   bars:BarNode[]=BarNodeArray;
-
-  constructor() { }
+  bars:BarNode[]=BarNodeArray;
+  constructor(private route:Router) { }
 
   ngOnInit(): void {
     GenerateBarNodeArray.build();
@@ -21,4 +21,8 @@ export class BarsComponent implements OnInit {
       this.bars=BarNodeArray;
     });
   }
+
+
+  
+
 }

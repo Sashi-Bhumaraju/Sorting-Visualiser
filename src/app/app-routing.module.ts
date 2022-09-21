@@ -6,45 +6,45 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MainComponent } from './main/main.component';
 
 const desktop_routes: Routes = [
-  {
-    path:'',
-    redirectTo:'get-started',
-    pathMatch:'full'
-  },
+  // {
+  //   path:'',
+  //   redirectTo:'get-started',
+  //   pathMatch:'full'
+  // },
 
-  {
-    path:'get-started',
-    component:LandingPageComponent,
-  },
-  {
-    path:'main',
-    component:MainComponent
-  },
-  {
-    path: '**',
-     component:HeaderComponent
-  }
+  // {
+  //   path:'get-started',
+  //   component:LandingPageComponent,
+  // },
+  // {
+  //   path:'main',
+  //   component:MainComponent
+  // },
+  // {
+  //   path: '**',
+  //    component:HeaderComponent
+  // }
 ];
 
 const mobile_routes: Routes = [
-  {
-    path:'',
-    redirectTo:'get-started',
-    pathMatch:'full'
-  },
+  // {
+  //   path:'',
+  //   redirectTo:'get-started',
+  //   pathMatch:'full'
+  // },
 
-  {
-    path:'get-started',
-    component:LandingPageComponent,
-  },
-  {
-    path:'main',
-    component:MainComponent
-  },
-  {
-    path: '**',
-     component:HeaderComponent
-  }
+  // {
+  //   path:'get-started',
+  //   component:LandingPageComponent,
+  // },
+  // {
+  //   path:'main',
+  //   component:MainComponent
+  // },
+  // {
+  //   path: '**',
+  //    component:HeaderComponent
+  // }
 
 ];
 

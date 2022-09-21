@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
 
   bars:number[] = [5];
   i=0
-  
+  open:boolean=true;
 
   constructor(private route:Router) { }
 
@@ -41,6 +41,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   goToMain():void{
-  this.route.navigate(['main']);
+  this.open=false
   }
 }

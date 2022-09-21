@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
+import { Speed } from 'models/Speed';
 import { from, of } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
@@ -82,5 +83,14 @@ export class HeaderComponent implements OnInit {
       this.default[0].isBubbleSort = true;
       Algorithms.bubbleSort();
     }
+ }
+
+
+ yourMethod(v:any):void
+ {
+       console.log(v)
+       Speed.length=0
+       Speed.push(v)
+      
  }
 }
