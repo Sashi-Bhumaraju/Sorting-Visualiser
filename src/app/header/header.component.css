@@ -53,3 +53,34 @@ table
   /* font-family: 'Azeret Mono', monospace; */
 }
 
+.user-toast
+  {
+
+    position:absolute;
+    width: 300px;
+    height: 90px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #888888;
+    font-family: 'Azeret Mono', monospace;
+   padding-left: 35px;
+   padding-top: 10px;
+  
+    margin-top: 10px;
+    float: left;
+    margin-left:  calc(100vw - 320px);
+  }
+
+  .user-toast-header
+  {
+    font-size: 13px;
+    font-weight: bold;
+   margin-top: 11px;
+  }
+
+  .user-toast-body
+  {
+   margin-top: 3px;
+    font-size: 12px;
+  }
