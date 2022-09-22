@@ -8,6 +8,8 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { BarsComponent } from './bars/bars.component';
 import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

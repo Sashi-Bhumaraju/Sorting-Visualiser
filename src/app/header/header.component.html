@@ -18,17 +18,18 @@
           </td>
         </tr>   
       </table>
-    
+      <!-- <mat-slider   color="primary" min="1" max="5" step="0.5" value="1.5"></mat-slider> -->
     
  
       
     </div>
+   
     <!-- <input style="margin-top: 0px; width:720px" type="range" min="0" max="10" step="1" value="0"> -->
-    <input value="10" type="range" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
+    <input [value]="valueU" type="range" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
     <!--  <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
 
   <div *ngIf="showToast" class="user-toast" >
-    <div class="user-toast-header">
+     <div class="user-toast-header">
       Algorithm is running
     </div>
     <div class="user-toast-body">You can't built new array now.</div>
@@ -39,10 +40,12 @@
   <div class="tip"  *ngIf="showTip[0]">
     <table style="margin: 0; padding:0">
       <tr style="margin: 0; padding:0">
-        Increse or decrese speed of algorithm by using range bar.
+        Increase or decrease speed of algorithm by using above pink bubble.
       </tr>
       <tr>
         <div (click)="stopTip()" class="buttonU">Got it </div>
       </tr>
     </table>
+
+
   </div>

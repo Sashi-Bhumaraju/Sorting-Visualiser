@@ -4,7 +4,7 @@ import { ApplicationStateService } from 'services/application-state.service';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MainComponent } from './main/main.component';
-
+import { MatSliderModule} from '@angular/material/slider';
 const desktop_routes: Routes = [
   // {
   //   path:'',

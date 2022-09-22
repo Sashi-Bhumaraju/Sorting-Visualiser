@@ -19,12 +19,13 @@ export class HeaderComponent implements OnInit {
 
   default:Deafault[]=SetDefault;
   showToast:boolean=false
-showTip:boolean[]=Tip;
+  showTip:boolean[]=Tip;
+  valueU:number=10;
+
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
-  
-    
+  ngOnInit(): void {  
+
     from(SetDefault).subscribe((v)=>{
     console.log("inside setdeafault"+v.isBubbleSort)
     this.default = SetDefault;
@@ -98,7 +99,40 @@ showTip:boolean[]=Tip;
  }
 
  stopTip():void{
+  
   Tip.length=0;
   Tip.push(false)
+    
+    this.repeat();
+ }
+
+ flag=1;
+ flag2=0;
+ repeat():void
+ {
+ 
+ console.log(".................hitted"+this.valueU)  
+   setTimeout(()=>{
+
+    if(this.valueU == 10)
+      this.flag2++;
+
+    if(this.flag2 == 3)
+    return  
+
+    if(this.valueU == 20)
+        this.flag = 0;
+
+        if(this.valueU == 1)
+        this.flag = 1;     
+
+     if(this.flag == 1)   
+        this.valueU++;
+
+     if(this.flag == 0)   
+        this.valueU--
+      this.repeat()
+   },20)
+
  }
 }
