@@ -120,10 +120,10 @@ export class HeaderComponent implements OnInit {
     if(this.flag2 == 3)
     return  
 
-    if(this.valueU == 20)
+    if(this.valueU == 13)
         this.flag = 0;
 
-        if(this.valueU == 1)
+        if(this.valueU == 7)
         this.flag = 1;     
 
      if(this.flag == 1)   
@@ -132,7 +132,7 @@ export class HeaderComponent implements OnInit {
      if(this.flag == 0)   
         this.valueU--
       this.repeat()
-   },20)
+   },28)
 
  }
 }
