@@ -1,0 +1,141 @@
+.user-toast
+  {
+
+    position:absolute;
+    width: 300px;
+    height: 90px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #888888;
+    font-family: 'Azeret Mono', monospace;
+   padding-left: 35px;
+   padding-top: 10px;
+  
+    margin-top: 10px;
+    float: left;
+    margin-left:  calc(100vw - 320px);
+  }
+
+  .user-toast-header
+  {
+    font-size: 13px;
+    font-weight: bold;
+   margin-top: 11px;
+  }
+
+  .user-toast-body
+  {
+   margin-top: 3px;
+    font-size: 12px;
+  }
+
+
+  input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    /* background-color:green; */
+    width: 700px;
+    height: 3px;
+    border-radius: 10px;
+    margin: 0 auto;
+    outline: 0;
+    padding: 0px;
+    background-image: ('perspective.png');
+    width: 720px;
+    direction: rtl
+  
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color:darkmagenta ;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+   margin: 0px;
+   padding: 0px;
+  
+  }​
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid darkmagenta;
+      
+    }
+    input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.3);
+     
+    }
+
+.tip
+{
+
+  font-size: 13px;
+  color: white;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+   
+  
+
+    position:absolute;
+    width: 300px;
+    height: 120px;
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #888888;
+    font-family: 'Azeret Mono', monospace;
+    padding-left: 25px;
+    /* padding-right: 15px; */
+    margin-left:  calc((100vw /2 - 142px));
+}
+
+.user-toast::after {
+  content: '';
+  position: absolute;
+  visibility: visible;
+  top: 0px;
+  right: -8px;
+  border: 10px solid transparent;
+  border-top: 10px solid black;
+  clear: both;
+}
+
+.tip::after {
+  transform: rotate(90deg);
+  content: '';
+  position: absolute;
+  visibility: visible;
+  top: -10px;
+   right: 150px;
+  border: 10px solid transparent;
+  border-top: 10px solid black;
+  clear: both;
+}
+
+.buttonU
+{
+  float: right;
+  margin-right: 34px;
+  background-color: white;
+  font-weight: 900;
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  border-radius: 3px;
+  width: 90px;
+  height: 23px;
+  margin-bottom: 10px;
+}
