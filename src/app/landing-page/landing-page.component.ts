@@ -68,7 +68,7 @@ export class LandingPageComponent implements OnInit {
 
     },30000)
     
-    audio.src= "/assets/dog.wav";
+    audio.src= "https://github.com/sasibhumaraju/Sorting-Visualiser/blob/main/docs/assets/dog.wav?raw=true";
     audio.load();
     audio.play();
   //  a.controls;
