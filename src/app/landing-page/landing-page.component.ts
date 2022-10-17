@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { audio } from 'models/AudioRef';
 import { Tip } from 'models/ShowTip';
+import { Tv } from 'models/ShowTv';
+import { from } from 'rxjs';
 
 
 @Component({
@@ -9,17 +12,24 @@ import { Tip } from 'models/ShowTip';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+  
 
   bars:number[] = [5];
   i=0
   open:boolean=true;
+  showTv: boolean[]=Tv;
 
   constructor(private route:Router) { }
 
   ngOnInit(): void {
+
+   
     let i =0;
      this.repeat();
-    
+   
+     from(Tv).subscribe(()=>{
+      this.showTv=Tv
+    })
 
   }
 
@@ -42,8 +52,31 @@ export class LandingPageComponent implements OnInit {
   }
 
   goToMain():void{
-  this.open=false
-  Tip.length=0
+    setTimeout(()=>
+    {
+      if(this.showTv[0]==false)
+         {
+          audio.pause();
+          Tip.length=0
+        Tip.push(true)
+          return;
+         }
+      Tv.length=0;
+      Tv.push(false);
+      Tip.length=0
   Tip.push(true)
+
+    },30000)
+    
+    audio.src= "/assets/dog.wav";
+    audio.load();
+    audio.play();
+  //  a.controls;
+
+  this.open=false
+  // Tip.length=0
+  // Tip.push(true)
+  Tv.length=0
+  Tv.push(true)
   }
 }

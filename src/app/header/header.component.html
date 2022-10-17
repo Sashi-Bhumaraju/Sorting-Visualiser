@@ -25,7 +25,7 @@
     </div>
    
     <!-- <input style="margin-top: 0px; width:720px" type="range" min="0" max="10" step="1" value="0"> -->
-    <input [value]="valueU" type="range" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
+    <input [value]="valueU" type="range" style=" box-shadow: 0px 0px 5px white;" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
     <!--  <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
 
   <div *ngIf="showToast" class="user-toast" >
@@ -34,6 +34,10 @@
     </div>
     <div class="user-toast-body">You can't built new array now.</div>
   </div>
+
+  
+
+
 
 
 
@@ -45,7 +49,27 @@
       <tr>
         <div (click)="stopTip()" class="buttonU">Got it </div>
       </tr>
-    </table>
-
-
+    </table>  
   </div>
+
+ <div class="tv" *ngIf="showTv[0]">
+  <div class="tvImage"  style="background-image: url('assets/tv.png'); ">
+    <div class="dogVideo" style="background-image: url('https://i.imgur.com/502u1Mn.gif')">
+<div class="tvOff"></div>
+    </div>
+  </div>
+
+
+  <div class="gotIt" style="position: absolute; margin-left:63%">
+<table>
+  <tr>
+<td><div class="c1" style="margin-top: 340px;background-color: white; width:12px; height:10px; border-radius:50%"></div></td>
+<td><div class="c2" style="margin-top: 330px;background-color: white; width:17px; height:15px; border-radius:50%"></div></td>
+<td><div class="c3" style="margin-top: 310px;background-color: white; width:23px; height:20px; border-radius:50%"></div></td>
+<!-- <td><div class="c1" style="margin-top: 300px;background-color: white; width:20px; height:20px;  border-radius:50%"></div></td> -->
+<td><div class="c4"(click)="stopTv()" style="margin-top: 210px;background-color: white; width:100px; height:90px; border-radius:50%">skip</div></td>
+  </tr>
+</table>
+  </div>
+
+ </div>

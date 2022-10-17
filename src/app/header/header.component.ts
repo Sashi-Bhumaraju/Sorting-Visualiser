@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { audio } from 'models/AudioRef';
 import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
 import { Tip } from 'models/ShowTip';
+import { Tv } from 'models/ShowTv';
 import { Speed } from 'models/Speed';
 // import { ShowTip } from 'models/ShowTip';
 import { from, of } from 'rxjs';
@@ -21,6 +23,7 @@ export class HeaderComponent implements OnInit {
   showToast:boolean=false
   showTip:boolean[]=Tip;
   valueU:number=10;
+  showTv:boolean[]=Tv;
 
   constructor(private router:Router) { }
 
@@ -35,9 +38,20 @@ export class HeaderComponent implements OnInit {
     from(Tip).subscribe(()=>{
       this.showTip=Tip
     })
+
+    from(Tv).subscribe(()=>{
+      this.showTv=Tv
+    })
   }
 
+stopTv():void{
+  Tv.length=0;
+  Tv.push(false);
+  Tip.length = 0;
+  Tip.push(true);
+  audio.pause();
 
+}
   goToOpeningPage():void{
       this.router.navigate(['get-started'])
   }
@@ -59,6 +73,7 @@ export class HeaderComponent implements OnInit {
     {
       this.default[0].isRunning=true
       this.default[0].isMergeSort= true;
+      Algorithms.mergeSort();
     }
   }
 
@@ -77,6 +92,7 @@ export class HeaderComponent implements OnInit {
     {
       this.default[0].isRunning=true
       this.default[0].isInsertionSort = true;
+      Algorithms.insertionSort();
     }
   }
 
@@ -102,11 +118,15 @@ export class HeaderComponent implements OnInit {
   
   Tip.length=0;
   Tip.push(false)
+
+  // Tv.length=0;
+  // Tv.push(true)
     
     this.repeat();
  }
 
- flag=1;
+ flag=0
+ ;
  flag2=0;
  repeat():void
  {
@@ -118,7 +138,12 @@ export class HeaderComponent implements OnInit {
       this.flag2++;
 
     if(this.flag2 == 3)
-    return  
+    {
+      this.valueU = 5;
+      return
+
+    }
+    
 
     if(this.valueU == 13)
         this.flag = 0;

@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { BarsComponent } from './bars/bars.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule} from '@angular/material/slider';
+// import { MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { MatSliderModule} from '@angular/material/slider';
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    MatSliderModule
+    // MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

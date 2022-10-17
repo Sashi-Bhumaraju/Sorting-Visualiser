@@ -4,6 +4,7 @@
 /* right side ......... */
 .rounded-button
 {
+
     font-family: 'Azeret Mono', monospace;
     margin-top: 10px;
     cursor: pointer;
@@ -13,6 +14,9 @@
     /* border: 2px solid black; */
     cursor: pointer;
     text-align: center;
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     /* margin-top: 5rem; */
     font-size: 20px;
@@ -20,16 +24,19 @@
     color: white;
     /* background-image: linear-gradient(to right,white,darkmagenta); */
     width: 280px;
-   
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1{
     /* margin-top: 5rem; */
-    font-weight: 800;
+    font-weight: bold;
     width: 280px;
     font-size: 20px;
     color: darkmagenta;
-    margin-top: 28px ;
+    margin-top: 25px ;
     display: flex;
   justify-content: center;
   align-items: center;
@@ -41,23 +48,21 @@ h6{
     color: #3e3e42;
     font-size: 14px;
     margin-top: 10px;
-}
+    font-weight: 400;
+ }
 
 
 table
 {
-   
     /* font-family: 'VT323', monospace; */
-   
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    
     /* vertical-align: bottom; */
      /* background-color: red; */
   /* margin-right: auto;
   margin-left: auto; */
   float: right;
   margin-right: 30px;
- margin-left: auto;
+  margin-left: auto;
   /* margin-right: 25%; */
   /* margin-right: 20rem; */
   /*    float: right; */
@@ -125,8 +130,8 @@ table
    /* border: 2px solid black; */
     background-color: white;
     border-radius: 40px;
-    width:570px;
-    height: 220px;
+    width:585px;
+    height: 240px;
     box-shadow: 0px 0px 10000px black;
   
 }

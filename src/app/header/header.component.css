@@ -7,13 +7,9 @@
     height: 75px;
     background-color: white;
     box-shadow: 0px 0px 5px #888888;
-
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-
   }
 
   .logo
@@ -25,24 +21,29 @@
     cursor: grab;
   }
 
+
   .buildNewArray
 {
   margin-left: 2rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
 }
 
+
+
 .sortType
 {
     cursor: pointer;
-    margin-left: 1.0rem;
+    margin-left: 0.5rem;
     margin-right: 1.0rem;
     color: black;
     font-size: 15px;
-    font-weight: 600;    
+    font-weight: 400;    
 }
+
+
 
 table
 {
@@ -53,9 +54,9 @@ table
   /* font-family: 'Azeret Mono', monospace; */
 }
 
+
 .user-toast
   {
-
     position:absolute;
     width: 300px;
     height: 90px;
@@ -64,13 +65,13 @@ table
     border-radius: 3px;
     box-shadow: 0px 0px 10px #888888;
     font-family: 'Azeret Mono', monospace;
-   padding-left: 35px;
-   padding-top: 10px;
-  
+    padding-left: 35px;
+    padding-top: 10px;
     margin-top: 10px;
     float: left;
     margin-left:  calc(100vw - 320px);
   }
+
 
   .user-toast-header
   {
@@ -79,8 +80,20 @@ table
    margin-top: 11px;
   }
 
+
   .user-toast-body
   {
    margin-top: 3px;
     font-size: 12px;
   }
+ .c4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   vertical-align: center;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 0px 90px black;
+  cursor: pointer;
+ }
