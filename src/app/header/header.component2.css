@@ -2,19 +2,24 @@
 
 
   input[type="range"] {
+    
     display: block;
     -webkit-appearance: none;
-    background-color: #bdc3c7;
+    background-color: black;
     /* background-color:green; */
     width: 700px;
-    height: 3px;
+    height: 5px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 20px auto;
+   
+    margin-right: auto;
+  
     outline: 0;
     padding: 0px;
     background-image: ('perspective.png');
     width: 720px;
-    direction: rtl
+    direction: rtl;
+   
   
   }
 
@@ -23,21 +28,25 @@
     background-color:darkmagenta ;
     width: 17px;
     height: 17px;
-    border-radius: 50%;
+    border-radius: 20%;
     border: 2px solid white;
     cursor: pointer;
     transition: .3s ease-in-out;
-   margin: 0px;
-   padding: 0px;
+   margin-top: 0px;
   
+   padding: 0px;
+   
   }​
     input[type="range"]::-webkit-slider-thumb:hover {
       background-color: white;
       border: 2px solid darkmagenta;
       
+     
+      
     }
     input[type="range"]::-webkit-slider-thumb:active {
       transform: scale(1.3);
+     
      
     }
 

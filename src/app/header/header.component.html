@@ -1,20 +1,20 @@
 
 
-    <div class="header-bar">
+    <div class="header-bar" >
 
    
       <table>
         <tr>
-          <td>  <div class="logo" (click)="goToOpeningPage()">Sorting-Visualiser</div></td>
-          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">New Array </div>
+          <td>  <div class="logo" (click)="goToOpeningPage()">SORTING-VISUALISER</div></td>
+          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">NEW </div>
           </td>
-          <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black'}" (click)="mergeSort()">Merge-Sort</div>
+          <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black','font-weight':default[0].isMergeSort? 'bold':'normal'}" (click)="mergeSort()">MERGE-SORT</div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black'}" (click)="quickSort()">Quick-Sort</div>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black','font-weight':default[0].isQuickSort? 'bold':'normal'}" (click)="quickSort()">QUICK-SORT</div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black'}" (click)="bubbleSort()">Bubble-Sort</div>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black','font-weight':default[0].isBubbleSort? 'bold':'normal'}" (click)="bubbleSort()">BUBBLE-SORT </div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black'}" (click)="insertionSort()">Insertion-Sort</div>
+          <td>  <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black','font-weight':default[0].isInsertionSort? 'bold':'normal'}" (click)="insertionSort()">INSERTION-SORT</div>
           </td>
         </tr>   
       </table>
@@ -25,10 +25,10 @@
     </div>
    
     <!-- <input style="margin-top: 0px; width:720px" type="range" min="0" max="10" step="1" value="0"> -->
-    <input [value]="valueU" type="range" style=" box-shadow: 0px 0px 5px white;" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
+    <input [value]="valueU" type="range" style=" z-index: 10; box-shadow: 0px 0px 5px white;" min="1" max="20" #ranger (input)=" yourMethod(ranger.value)">
     <!--  <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
 
-  <div *ngIf="showToast" class="user-toast" >
+  <div *ngIf="showToast" class="user-toast"  style="z-index: 10;" >
      <div class="user-toast-header">
       Algorithm is running
     </div>
@@ -41,7 +41,7 @@
 
 
 
-  <div class="tip"  *ngIf="showTip[0]">
+  <div class="tip"  *ngIf="showTip[0]" style="z-index: 10;">
     <table style="margin: 0; padding:0">
       <tr style="margin: 0; padding:0">
         Increase or decrease speed of algorithm by using above pink bubble.
@@ -52,7 +52,7 @@
     </table>  
   </div>
 
- <div class="tv" *ngIf="showTv[0]">
+ <div class="tv" *ngIf="showTv[0]"  style="z-index: 10;">
   <div class="tvImage"  style="background-image: url('assets/tv.png'); ">
     <div class="dogVideo" style="background-image: url('https://i.imgur.com/502u1Mn.gif')">
 <div class="tvOff"></div>

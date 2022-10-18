@@ -11,9 +11,10 @@ export class Algorithms{
 
 // Bubble sort
     static bubbleSort():void{
-      let  i:number = 0;
-       let j:number = 1;
+      // let  i:number = 0;
+       let j:number = 0;
        let l:number = BarNodeArray.length;
+       let n = l-1;
 
        let prevI:number=0;
        let prevJ:number=1;
@@ -22,28 +23,43 @@ export class Algorithms{
         // console.log("inside reat"+l)
         setTimeout(()=>
         {
-        if(j>=l){
-            i++;
-            j=i+1;
-        }   
+
+          if(j == n)
+          {
+            BarNodeArray[j].color = 'P';
+            n--;
+            j=0;
+            
+          }
+        // if(j>=l){
+        //     i++;
+        //     j=i+1;
+        // }   
 
         BarNodeArray[prevI].color = 'N';
-        BarNodeArray[i].color = 'G';
+        BarNodeArray[j].color = 'G';
 
-         prevI = i;
-         BarNodeArray[prevJ].color = 'N';
-         BarNodeArray[j].color = 'R';
-         prevJ = j;
+       
 
 
-           if(BarNodeArray[j].height < BarNodeArray[i].height)
+        prevI = j;
+          // BarNodeArray[prevJ].color = 'N';
+         BarNodeArray[j+1].color = 'G';
+       
+         prevJ = j+1;
+
+
+
+           if(BarNodeArray[j].height > BarNodeArray[j+1].height)
            {
+            BarNodeArray[j].down = true;
+            j!=0?  BarNodeArray[j-1].down = false: null;
             // console.log("inside timeout + j"+j)
             let temp = BarNodeArray[j].height;
-            BarNodeArray[j].height = BarNodeArray[i].height;
-            BarNodeArray[i].height = temp;
+            BarNodeArray[j].height = BarNodeArray[j+1].height;
+            BarNodeArray[j+1].height = temp;
            }
-           if(i==l-2 && j==l-1)
+           if(n==1)
            {
 
             BarNodeArray.map((v)=>v.color='N')
@@ -56,7 +72,7 @@ export class Algorithms{
            }
           j++;
           repeat();
-        },Speed[0])
+        },100)
        })();
     }
 

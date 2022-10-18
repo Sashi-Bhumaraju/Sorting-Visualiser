@@ -19,7 +19,12 @@ export class LandingPageComponent implements OnInit {
   open:boolean=true;
   showTv: boolean[]=Tv;
 
-  constructor(private route:Router) { }
+  constructor(private route:Router) {
+
+
+   
+
+   }
 
   ngOnInit(): void {
 
@@ -47,7 +52,7 @@ export class LandingPageComponent implements OnInit {
     for(let j = 1; j < 14 ; j++)
     {
       this.bars[j]= j*this.i*0.4
-      console.log(this.bars[j])
+      // console.log(this.bars[j])
     }
   }
 

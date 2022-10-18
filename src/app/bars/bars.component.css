@@ -7,14 +7,16 @@
 
 .bar{
 
-    width: 9px; 
-    background-color:green;
+    width: 20px; 
+    background-color:darkmagenta;
     margin-left: 1px;
     /* box-shadow: 0px 0px 10px white; */
+    
 }
 
 td {
-    vertical-align: top;
+    /* vertical-align: top; */
+    vertical-align: bottom;
   }
 table{
     margin-left: auto;
@@ -31,3 +33,22 @@ table{
     margin-right: auto;
 }
 
+@keyframes down {
+    from {margin-top: 0%;}
+    to {margin-top: 200px;}
+  }
+
+  
+@keyframes up {
+    from {margin-top: 0%;}
+    to {margin-top: 400px;}
+  }
+  @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+  .animate__animated
+  {
+       z-index: -9;
+  }
