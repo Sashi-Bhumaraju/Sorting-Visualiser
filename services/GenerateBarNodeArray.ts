@@ -7,7 +7,7 @@ export class GenerateBarNodeArray{
   static  build():BarNode[]
     {
         BarNodeArray.length=0;
-        for(let i=0; i<30;i++)
+        for(let i=0; i<20;i++)
         BarNodeArray.push({
           height: Math.floor((Math.random() * 400) + 10), color: 'N',
           left: false,

@@ -1,1 +1,1 @@
-export let Speed:number[]=[200];
+export let Speed:number[]=[600];

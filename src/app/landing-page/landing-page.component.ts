@@ -68,8 +68,12 @@ export class LandingPageComponent implements OnInit {
          }
       Tv.length=0;
       Tv.push(false);
-      Tip.length=0
-  Tip.push(true)
+      if(Tip[0]==false)
+      {
+        Tip.length=0
+        Tip.push(true)
+      }
+    
 
     },30000)
     

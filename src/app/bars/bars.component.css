@@ -7,10 +7,14 @@
 
 .bar{
 
-    width: 20px; 
-    background-color:darkmagenta;
-    margin-left: 1px;
-    /* box-shadow: 0px 0px 10px white; */
+    width: 35px; 
+    background-color:orange;
+    margin-left: 2px;
+    box-shadow: 0px 0px 10px black;
+    
+    
+   
+  
     
 }
 

@@ -5,10 +5,10 @@
         <tr  style="overflow: visible;">
     <td *ngFor="let bar of bars"  style="overflow: visible;">
 <div  style="overflow: visible;"
- [ngClass]=" bar.down? ['bar', 'animate__animated','animate__slideInLeft'] : ['bar','animate']"
+ [ngClass]=" bar.right? ['bar', 'animate__animated','animate__slideInLeft'] : bar.left? ['bar', 'animate__animated','animate__slideInRight']: bar.up? ['bar', 'animate__animated','animate__slideInLeft']:bar.down? ['bar', 'animate__animated','animate__slideInLeft']:['bar']"
     
      [ngStyle]="{'height.px':bar.height ,
-         'background-color': bar.color=='N'? 'pink' : bar.color=='G'? '#90ee90 ' : bar.color=='P'? 'darkmagenta':'#FFC0CB' , 'z-index': bar.down? '-9' :'-9', 'animation-name':bar.up? 'up':null, 'animation-fill-mode': 'forwards' ,'animation-duration': '0.1s'}"
+         'background-color': bar.color=='N'? 'pink' : bar.color=='G'? '#90ee90 ' : bar.color=='P'? 'orange':'#FFC0CB' , 'z-index': bar.down? '-9' :'-9', 'animation-name':bar.up? 'up':null, 'animation-fill-mode': 'forwards' ,'animation-duration': S[0]+'s' }"
          
          ></div>
     </td>

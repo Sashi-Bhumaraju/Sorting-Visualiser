@@ -52,8 +52,10 @@ export class Algorithms{
 
            if(BarNodeArray[j].height > BarNodeArray[j+1].height)
            {
-            BarNodeArray[j].down = true;
-            j!=0?  BarNodeArray[j-1].down = false: null;
+            BarNodeArray[j+1].right = true;
+            j!=0?  BarNodeArray[j].right = false: null;
+            BarNodeArray[j].left=true
+
             // console.log("inside timeout + j"+j)
             let temp = BarNodeArray[j].height;
             BarNodeArray[j].height = BarNodeArray[j+1].height;
@@ -72,7 +74,7 @@ export class Algorithms{
            }
           j++;
           repeat();
-        },100)
+        },Speed[0])
        })();
     }
 

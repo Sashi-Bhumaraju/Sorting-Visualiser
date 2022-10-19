@@ -22,8 +22,9 @@ export class HeaderComponent implements OnInit {
   default:Deafault[]=SetDefault;
   showToast:boolean=false
   showTip:boolean[]=Tip;
-  valueU:number=10;
+  valueU:number=Speed[0];
   showTv:boolean[]=Tv;
+  isCompleteTip:boolean=true;
 
   constructor(private router:Router) { }
 
@@ -121,43 +122,42 @@ stopTv():void{
 
   // Tv.length=0;
   // Tv.push(true)
-    
+    if ( this.isCompleteTip )
     this.repeat();
+    this.isCompleteTip=false;
  }
 
- flag=0
- ;
+ flag=0;
  flag2=0;
  repeat():void
  {
- 
- console.log(".................hitted"+this.valueU)  
-   setTimeout(()=>{
 
-    if(this.valueU == 10)
+//  console.log(".................hitted"+this.valueU)  
+   setTimeout(()=>{
+    if(this.valueU == 600)
       this.flag2++;
 
     if(this.flag2 == 3)
     {
-      this.valueU = 5;
+      this.valueU = 600;
       return
 
     }
     
 
-    if(this.valueU == 13)
+    if(this.valueU == 700)
         this.flag = 0;
 
-        if(this.valueU == 7)
+    if(this.valueU == 500)
         this.flag = 1;     
 
      if(this.flag == 1)   
-        this.valueU++;
+        this.valueU = this.valueU + 5;
 
      if(this.flag == 0)   
-        this.valueU--
+        this.valueU= this.valueU -5
       this.repeat()
-   },28)
+   },1)
 
  }
 }
