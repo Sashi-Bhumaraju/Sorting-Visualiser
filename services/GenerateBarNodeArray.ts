@@ -9,12 +9,13 @@ export class GenerateBarNodeArray{
         BarNodeArray.length=0;
         for(let i=0; i<20;i++)
         BarNodeArray.push({
-          height: Math.floor((Math.random() * 400) + 10), color: 'N',
+          height: (Math.random() * 250) + 10, color: 'N',
           left: false,
           right: false,
           up: false,
           down: false,
-          positionDown: false
+          positionDown: false,
+          staydown: false
         });
 
         // BarNodeArray.push({color:'N',height:10})

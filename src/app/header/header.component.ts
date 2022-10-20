@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   showTip:boolean[]=Tip;
   valueU:number=Speed[0];
   showTv:boolean[]=Tv;
+  showSpeed:boolean=false;
   isCompleteTip:boolean=true;
 
   constructor(private router:Router) { }
@@ -31,7 +32,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {  
 
     from(SetDefault).subscribe((v)=>{
-    console.log("inside setdeafault"+v.isBubbleSort)
+    // console.log("inside setdeafault"+v.isBubbleSort)
     this.default = SetDefault;
 
     }); 
@@ -46,6 +47,7 @@ export class HeaderComponent implements OnInit {
   }
 
 stopTv():void{
+  this.showSpeed = true
   Tv.length=0;
   Tv.push(false);
   Tip.length = 0;
@@ -109,7 +111,7 @@ stopTv():void{
 
  yourMethod(v:any):void
  {
-       console.log(v)
+      //  console.log(v)
        Speed.length=0
        Speed.push(v)
       
@@ -123,7 +125,7 @@ stopTv():void{
   // Tv.length=0;
   // Tv.push(true)
     if ( this.isCompleteTip )
-    this.repeat();
+     this.repeat();
     this.isCompleteTip=false;
  }
 

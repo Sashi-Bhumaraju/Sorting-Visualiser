@@ -88,7 +88,8 @@ export class Algorithms{
       let prevI:number=1;
       let prevJ:number=0;
 
-     
+      BarNodeArray[j+1].down = true;
+      BarNodeArray[j+1].color = 'G';
 
       (function repeat(){
          
@@ -98,27 +99,54 @@ export class Algorithms{
          
           if( j>=0 && BarNodeArray[j].height > BarNodeArray[j+1].height )
           {
+            
+            BarNodeArray[j+1].right = true;
+            j!=0?  BarNodeArray[j].right = false: null;
+            BarNodeArray[j].left=true
+
+            i==j+1?  BarNodeArray[j+1].down=false : null;
 
            
+            // BarNodeArray[j+1].right = true;
+            // BarNodeArray[j+1].right = true;
+            // BarNodeArray[j+1].right = true;
              
               // BarNodeArray[prevJ].color = 'N';
               // BarNodeArray[j].color = 'R';
               // prevJ = j;
+              BarNodeArray[j+1].color = 'P';
+             
+              // BarNodeArray[j+1].staydown = false;
+              // BarNodeArray[j].staydown = true;
+              // BarNodeArray[j].down=true;
             
           
             let temp = BarNodeArray[j+1].height;
             BarNodeArray[j+1].height = BarNodeArray[j].height;
             BarNodeArray[j].height = temp;
             j--;
-            BarNodeArray[prevI].color = 'N';
+            BarNodeArray[prevI].color = 'P';
             BarNodeArray[j+1].color = 'G';
              prevI = j+1;
 
            
           }
           else{
+
+            
+             
+           
+
+            j==0? BarNodeArray[j].color = 'P' :BarNodeArray[j+1].color = 'P' ;
+            // BarNodeArray[j+1].staydown = false;
+            BarNodeArray[j+1].down=false;
+            BarNodeArray[j+1].color = 'P';
+            BarNodeArray[j+1].up=true ;
+            BarNodeArray[i].color = 'P';
             i++;
             j=i-1;
+          
+            // BarNodeArray[j+1].up = true;
 
             if(i==l)
             {
@@ -130,6 +158,8 @@ export class Algorithms{
               })
               return;
             }
+            BarNodeArray[j+1].color = 'G';
+            BarNodeArray[j+1].down=true;
           }
          
             // if(i==l && j==0)

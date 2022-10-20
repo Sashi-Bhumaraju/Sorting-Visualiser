@@ -6,5 +6,6 @@ export class BarNode{
     up: boolean = false;
     down: boolean = false;
     positionDown:boolean = false;
+    staydown: boolean =true;
 }    
  

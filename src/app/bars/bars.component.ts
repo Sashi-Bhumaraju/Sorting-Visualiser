@@ -17,8 +17,11 @@ export class BarsComponent implements OnInit {
   S:number[]=[0.6];
 
   constructor(private route:Router) { 
+
+    console.log(Speed[0]/1000)
     from(Speed).subscribe(()=>{
-      this.S[0] = Speed[0]/1000;
+      this.S = Speed
+      
     })
   }
 

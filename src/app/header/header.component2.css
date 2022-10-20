@@ -24,16 +24,19 @@
   }
 
   input[type="range"]::-webkit-slider-thumb {
+
+   
     -webkit-appearance: none;
     background-color:darkmagenta ;
-    width: 17px;
-    height: 17px;
+    width: 12px;
+    height: 18px;
     border-radius: 20%;
     border: 2px solid white;
     cursor: pointer;
     transition: .3s ease-in-out;
    margin-top: 0px;
-  
+   animation-fill-mode: 'forwards' ;
+  animation-duration: 0.8s;
    padding: 0px;
    
   }​
@@ -61,7 +64,8 @@
   align-items: center;
   vertical-align: center;
    
-  
+  animation-fill-mode: 'forwards' ;
+  animation-duration: 0.8s;
 
     position:absolute;
     width: 300px;
@@ -73,8 +77,9 @@
     box-shadow: 0px 0px 10px #888888;
     font-family: 'Azeret Mono', monospace;
     padding-left: 25px;
+    margin-top: -2px;
     /* padding-right: 15px; */
-    margin-left:  calc((100vw /2 - 142px));
+    margin-left:  calc((100vw /2 - 152px));
 }
 
 .user-toast::after {

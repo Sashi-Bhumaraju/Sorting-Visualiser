@@ -1,28 +1,34 @@
 .barsArea
 {
+  
     width:100%;
+    height: 400px;
+    /* overflow: hidden; */
+    
     /* height: 100%; */
      /* margin: 10px; */
 }
 
 .bar{
-
     width: 35px; 
     background-color:orange;
     margin-left: 2px;
     box-shadow: 0px 0px 10px black;
+    margin-bottom: 250px;
     
-    
-   
-  
+
     
 }
 
 td {
+  height: 510px;
     /* vertical-align: top; */
     vertical-align: bottom;
   }
 table{
+  overflow: hidden;
+  /* background-color: red; */
+  /* height: 250px; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px
@@ -38,14 +44,14 @@ table{
 }
 
 @keyframes down {
-    from {margin-top: 0%;}
-    to {margin-top: 200px;}
+  from {margin-bottom: 250px;}
+    to { margin-bottom: 0px;}
   }
 
   
 @keyframes up {
-    from {margin-top: 0%;}
-    to {margin-top: 400px;}
+    from {margin-bottom: 0px;}
+    to {margin-bottom: 250px; }
   }
   @keyframes example {
     from {background-color: red;}
