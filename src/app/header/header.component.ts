@@ -5,7 +5,7 @@ import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
-import { Speed } from 'models/Speed';
+import { Speed, stopTipp } from 'models/Speed';
 // import { ShowTip } from 'models/ShowTip';
 import { from, of } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
@@ -48,6 +48,7 @@ export class HeaderComponent implements OnInit {
 
 stopTv():void{
   this.showSpeed = true
+  stopTipp[0]=true;
   Tv.length=0;
   Tv.push(false);
   Tip.length = 0;
@@ -86,6 +87,7 @@ stopTv():void{
     {
       this.default[0].isRunning=true
       this.default[0].isQuickSort = true;
+      Algorithms.quickSort();
     }
   }
   

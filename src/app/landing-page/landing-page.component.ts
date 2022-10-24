@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { audio } from 'models/AudioRef';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
+import { stopTipp } from 'models/Speed';
 import { from } from 'rxjs';
 
 
@@ -62,8 +63,13 @@ export class LandingPageComponent implements OnInit {
       if(this.showTv[0]==false)
          {
           audio.pause();
-          Tip.length=0
-        Tip.push(true)
+
+          if(stopTipp[0]==false)
+          {
+            Tip.length=0
+            Tip.push(true)
+          }
+        
           return;
          }
       Tv.length=0;

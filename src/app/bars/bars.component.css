@@ -1,37 +1,45 @@
+
+
 .barsArea
 {
   
     width:100%;
-    height: 400px;
+    height: 457px;
     /* overflow: hidden; */
     
     /* height: 100%; */
      /* margin: 10px; */
+     padding-top: 50px;
+     /* margin-top: 50px; */
+     /* background-color: green; */
 }
 
 .bar{
     width: 35px; 
     background-color:orange;
-    margin-left: 2px;
+    margin: 1px;
     box-shadow: 0px 0px 10px black;
-    margin-bottom: 250px;
+   
     
 
     
 }
 
 td {
-  height: 510px;
+  height: 357px;
     /* vertical-align: top; */
     vertical-align: bottom;
   }
 table{
   overflow: hidden;
   /* background-color: red; */
-  /* height: 250px; */
+  height:357px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px
+    /* margin-top: 100px; */
+   
+    
+    
 }  
 
 .h-bar
@@ -43,22 +51,24 @@ table{
     margin-right: auto;
 }
 
-@keyframes down {
-  from {margin-bottom: 250px;}
-    to { margin-bottom: 0px;}
-  }
+
 
   
-@keyframes up {
-    from {margin-bottom: 0px;}
-    to {margin-bottom: 250px; }
+@keyframes leftX {
+    from {opacity: 0;  transform: translate(var(--left)) }
+    to {  
+    }
   }
-  @keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
+
+@keyframes rightX {
+  from {opacity: 0; transform: translate(var(--right))}
+  to {  
+   
+  }
   }
 
   .animate__animated
   {
        z-index: -9;
   }
+

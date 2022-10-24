@@ -3,9 +3,7 @@ export class BarNode{
     color:String='';
     left: boolean = false;
     right: boolean = false;
-    up: boolean = false;
-    down: boolean = false;
-    positionDown:boolean = false;
-    staydown: boolean =true;
+    overLeft:boolean=false;
+    overRight:boolean=false
 }    
  

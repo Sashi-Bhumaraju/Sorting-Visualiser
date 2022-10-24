@@ -6,7 +6,7 @@
       <table>
         <tr>
           <td>  <div class="logo" (click)="goToOpeningPage()">SORTING-VISUALISER</div></td>
-          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">NEW </div>
+          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">NEW ARRAY</div>
           </td>
           <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black','font-weight':default[0].isMergeSort? 'bold':'normal'}" (click)="mergeSort()">MERGE-SORT</div>
           </td>
@@ -25,7 +25,7 @@
     </div>
    
     <!-- <input style="margin-top: 0px; width:720px" type="range" min="0" max="10" step="1" value="0"> -->
-    <input *ngIf="showSpeed" [value]="valueU "  type="range" style=" z-index: 10; box-shadow: 0px 0px 5px white;" min="200" max="1000" #ranger (input)=" yourMethod(ranger.value)">
+    <input [value]="valueU "  type="range" style=" z-index: 10; box-shadow: 0px 0px 5px white;" min="200" max="1000" #ranger (input)=" yourMethod(ranger.value)">
     <!--  <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> -->
 
   <div *ngIf="showToast" class="user-toast"  style="z-index: 10;" >

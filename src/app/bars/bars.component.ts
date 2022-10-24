@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BarNode } from 'models/BarNode';
 import { BarNodeArray } from 'models/BarNodeArray';
-import { Speed } from 'models/Speed';
-import { from } from 'rxjs';
+import { AnimateDistance, Speed } from 'models/Speed';
+import { BehaviorSubject, from, Observable, Subscriber } from 'rxjs';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 
 @Component({
@@ -13,16 +13,31 @@ import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 })
 export class BarsComponent implements OnInit {
 
+ 
+
+  
+
   bars:BarNode[]=BarNodeArray;
   S:number[]=[0.6];
+  
 
-  constructor(private route:Router) { 
-
+  constructor(private route:Router,private ele:ElementRef) { 
+   
+  
     console.log(Speed[0]/1000)
     from(Speed).subscribe(()=>{
       this.S = Speed
+    
       
     })
+
+    
+
+  } 
+
+  d():void{
+    // this.ele.nativeElement.style.setProperty('--distance',AnimateDistance[0]+'px')
+
   }
 
   ngOnInit(): void {
@@ -31,6 +46,25 @@ export class BarsComponent implements OnInit {
       this.bars =BarNodeArray;
 
     });
+
+   
+   let  a = 10;
+   let  o=new Observable((a)=>
+     {
+             a.next("sashi") 
+     })
+
+     o.subscribe((v)=>{
+     
+     })
+
+     let user = new BehaviorSubject<number>(10);
+     user.asObservable
+     AnimateDistance.subscribe((v)=>{
+      this.ele.nativeElement.style.setProperty('--left',-v+'px');
+      this.ele.nativeElement.style.setProperty('--right',v+'px');
+      console.log(v,'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+     })
   }
 
 
