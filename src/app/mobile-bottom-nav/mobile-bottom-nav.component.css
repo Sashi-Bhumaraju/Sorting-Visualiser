@@ -10,7 +10,10 @@
     align-items: center;
     padding: 20px;
     box-shadow: 0px 0px 1px rgb(119, 119, 119);
-}
+   /* border-top-left-radius: 25px;
+   border-top-right-radius: 25px;
+   border-radius: 30px;*/
+} 
 .iconX
 {
     width: 40px;
