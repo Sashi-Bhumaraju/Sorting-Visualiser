@@ -35,12 +35,10 @@ export class BarsComponent implements OnInit {
 
   } 
 
-  d():void{
-    // this.ele.nativeElement.style.setProperty('--distance',AnimateDistance[0]+'px')
-
-  }
+ 
 
   ngOnInit(): void {
+    
     GenerateBarNodeArray.build();
     from(BarNodeArray).subscribe(()=>{
       this.bars =BarNodeArray;

@@ -1,5 +1,6 @@
 import { BarNode } from "models/BarNode";
 import { BarNodeArray } from "models/BarNodeArray";
+import { ApplicationStateService } from "./application-state.service";
 
 export class GenerateBarNodeArray{
 
@@ -7,9 +8,14 @@ export class GenerateBarNodeArray{
   static  build():BarNode[]
     {
         BarNodeArray.length=0;
+     let height = 0;
+        ApplicationStateService.getIsMobileResolution()?  height = 71.4285 :  height = 250;
+
+        
+       
 
         while(BarNodeArray.length < 20){
-        var r = (Math.random() * 250) + 20;
+        var r = (Math.random() * height) + 20;
         for(let i = 0 ; i< BarNodeArray.length; i++)
         {
           if(BarNodeArray[i].height == r)

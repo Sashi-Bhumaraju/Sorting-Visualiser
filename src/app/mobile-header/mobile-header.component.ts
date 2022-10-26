@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BarNode } from 'models/BarNode';
+import { BarNodeArray } from 'models/BarNodeArray';
 
 @Component({
   selector: 'app-mobile-header',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileHeaderComponent implements OnInit {
 
+  
   constructor() { }
 
   ngOnInit(): void {
