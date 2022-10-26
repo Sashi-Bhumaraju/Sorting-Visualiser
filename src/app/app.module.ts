@@ -9,6 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { BarsComponent } from './bars/bars.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
+import { MobileBottomNavComponent } from './mobile-bottom-nav/mobile-bottom-nav.component';
+import { MobileBodyComponent } from './mobile-body/mobile-body.component';
+import { MobileComponent } from './mobile/mobile.component';
 // import { MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
@@ -17,7 +21,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LandingPageComponent,
     MainComponent,
     HeaderComponent,
-    BarsComponent
+    BarsComponent,
+    MobileHeaderComponent,
+    MobileBottomNavComponent,
+    MobileBodyComponent,
+    MobileComponent
   ],
   imports: [
     BrowserModule,

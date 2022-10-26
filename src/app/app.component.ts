@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { isMobile } from 'models/IsMobile';
+import { ApplicationStateService } from 'services/application-state.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'Sorting-Visualiser';
+
+  isM = ApplicationStateService.getIsMobileResolution();  
 }

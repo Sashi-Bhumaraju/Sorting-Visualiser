@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApplicationStateService } from 'services/application-state.service';
 
 @Component({
   selector: 'app-main',
@@ -10,6 +11,9 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(ApplicationStateService.getIsMobileResolution(),'nononon')
   }
 
 }
+
+
