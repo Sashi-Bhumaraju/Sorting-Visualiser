@@ -9,7 +9,7 @@ export class GenerateBarNodeArray{
     {
         BarNodeArray.length=0;
      let height = 0;
-        ApplicationStateService.getIsMobileResolution()?  height = 71.4285 :  height = 250;
+        ApplicationStateService.getIsMobileResolution()?  height = 107.4285 :  height = 250;
 
         
        
