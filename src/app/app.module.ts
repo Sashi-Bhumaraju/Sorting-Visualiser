@@ -13,7 +13,9 @@ import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
 import { MobileBottomNavComponent } from './mobile-bottom-nav/mobile-bottom-nav.component';
 import { MobileBodyComponent } from './mobile-body/mobile-body.component';
 import { MobileComponent } from './mobile/mobile.component';
-// import { MatSliderModule} from '@angular/material/slider';
+import { MatSliderModule} from '@angular/material/slider';
+import { MatListModule} from '@angular/material/list';
+import {ScrollingModule} from '@angular/cdk/scrolling'
 
 @NgModule({
   declarations: [
@@ -25,13 +27,16 @@ import { MobileComponent } from './mobile/mobile.component';
     MobileHeaderComponent,
     MobileBottomNavComponent,
     MobileBodyComponent,
-    MobileComponent
+    MobileComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    MatListModule,
+    ScrollingModule
     // MatSliderModule
   ],
   providers: [],
