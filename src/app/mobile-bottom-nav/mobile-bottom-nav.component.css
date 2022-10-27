@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    box-shadow: 0px 0px 1px rgb(119, 119, 119);
+    /* box-shadow: 0px 0px 5px rgb(119, 119, 119); */
    /* border-top-left-radius: 25px;
    border-top-right-radius: 25px;
    border-radius: 30px;*/
@@ -47,12 +47,13 @@ table{
 .bottom-body{
     width: 100%;
     height: calc(100% - 60px - 200px - 50px );
-    /* background-color: red; */
+    background-color: #ffe0ff;
     margin-bottom: 60px;
     padding-top: 30px;
     overflow-y: scroll;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    box-shadow: 0px -5px 10px rgb(184, 184, 184);
 }
 .bottom-body::-webkit-scrollbar {
     display: none;
