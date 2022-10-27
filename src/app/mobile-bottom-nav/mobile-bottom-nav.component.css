@@ -2,8 +2,8 @@
     font-family: 'Prompt', sans-serif;
     width: 100%;
     height:60px;
-    position: fixed;
-    bottom: 0px;
+    /* position: fixed; */
+    /* bottom: 0px; */
     /* background-color: red; */
     vertical-align: center;
     display: flex;
@@ -45,15 +45,15 @@ table{
 }
 
 .bottom-body{
-    width: 100%;
-    height: calc(100% - 60px - 200px - 50px );
+    width: calc(100% - 40px) ;
+    height: calc(100%  - 200px - 50px - 40px);
     background-color: #ffe0ff;
     margin-bottom: 60px;
     padding-top: 30px;
     overflow-y: scroll;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0px -5px 10px rgb(184, 184, 184);
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px rgb(184, 184, 184);
+    margin: 20px;
 }
 .bottom-body::-webkit-scrollbar {
     display: none;
