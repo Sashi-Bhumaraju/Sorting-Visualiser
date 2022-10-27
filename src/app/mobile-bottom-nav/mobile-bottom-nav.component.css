@@ -47,7 +47,8 @@ table{
 .bottom-body{
     width: calc(100% - 40px) ;
     height: calc(100%  - 200px - 50px - 40px);
-    background-color: #ffe0ff;
+    /* background-color: #ffe0ff; */
+    background-color: white;
     margin-bottom: 60px;
     padding-top: 30px;
     overflow-y: scroll;
