@@ -168,7 +168,7 @@ input[type="range"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 50px;
         
     }
 
@@ -198,7 +198,7 @@ input[type="range"] {
         width: calc(100% - 80px) ;
         height: 40px;
         background-color: white;
-        margin-top: 40px;
+        margin-top: 50px;
         border-radius: 10px;
         display: flex;
         vertical-align: center;
