@@ -45,14 +45,20 @@ table{
 }
 
 .bottom-body{
+    /* vertical-align: center; */
+   
     width: calc(100% - 40px) ;
     height: calc(100%  - 200px - 50px - 40px);
     /* background-color: #ffe0ff; */
     background-color: white;
     margin-bottom: 60px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     overflow-y: scroll;
     border-radius: 40px;
+    /* border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
     box-shadow: 0px 0px 10px rgb(184, 184, 184);
     margin: 20px;
 }
@@ -75,3 +81,158 @@ table{
     0 0px 33.4px rgba(0, 0, 0, 0.086),
     0 0px 0px rgba(0, 0, 0, 0.12)
 }
+
+.h-bar{
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.sort-name{
+    font-family: 'Prompt', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    /* background-color: red; */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    
+    display: block;
+    -webkit-appearance: none;
+    background-color: black;
+    /* background-color:green; */
+    width: 10px;
+    height: 2px;
+    border-radius: 10px;
+    /* margin: 20px auto; */
+   
+    /* margin-right: auto; */
+  
+    outline: 0;
+    padding: 0px;
+    background-image: ('perspective.png');
+    width: 280px;
+    direction: rtl;
+   
+  
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+
+   
+    -webkit-appearance: none;
+    background-color:darkmagenta ;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+   /* margin-top: 0px; */
+   animation-fill-mode: 'forwards' ;
+  animation-duration: 0.8s;
+   padding: 0px;
+   
+  }​
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid darkmagenta;
+      
+     
+      
+    }
+    input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.3);
+     
+     
+    }
+
+
+    .range-box{
+
+        width: 100%;
+        /* background-color: red; */
+        height: 20px;
+        display: flex;
+        vertical-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        
+    }
+
+    .speed-index{
+        width: calc(100% - 100px)  ;
+        /* background-color: red; */
+        height: 20px;
+        display: flex;
+        vertical-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 50px;
+
+    }
+
+    .speed-index-item{
+        font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .build-new-array{
+        width: calc(100% - 80px) ;
+        height: 40px;
+        background-color: white;
+        margin-top: 40px;
+        border-radius: 10px;
+        display: flex;
+        vertical-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 40px;
+        margin-right: 40px;
+        box-shadow: 0px 0px 10px rgb(184, 184, 184);
+        font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        color: black;
+        font-size: 17px;
+        
+    }
+
+    .sort-button{
+        width: calc(100% - 80px) ;
+        height: 40px;
+        background-color: darkmagenta;
+        margin-top: 20px;
+        border-radius: 10px;
+        display: flex;
+        vertical-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 40px;
+        margin-right: 40px;
+        box-shadow: 0px 0px 10px rgb(184, 184, 184);
+        font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        color: white;
+        font-size: 17px;
+        
+
+    }
