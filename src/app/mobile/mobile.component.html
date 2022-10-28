@@ -1,6 +1,24 @@
 
-<div class="mobile-body">
+<div class="mobile-body" >
     <app-mobile-header></app-mobile-header>
+
+    <div class="nothing" *ngIf="!mA[0]"  >
+        <app-mobile-body></app-mobile-body>
+        <app-mobile-bottom-nav></app-mobile-bottom-nav>
+    </div>
+    <div class="nothing" *ngIf="mA[0]"  >
+        <app-mobile-about></app-mobile-about>
+    </div>
+
+    
+</div>
+
+<ng-template #body>
     <app-mobile-body></app-mobile-body>
     <app-mobile-bottom-nav></app-mobile-bottom-nav>
-</div>
+</ng-template>
+
+
+<ng-template #about> 
+    <app-mobile-about></app-mobile-about>
+</ng-template>

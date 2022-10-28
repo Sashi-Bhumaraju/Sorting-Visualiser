@@ -1,5 +1,9 @@
 <div class="header">
     <div class="logo">Sorting Visualiser</div>
-    <mat-icon style="color:darkmagenta">sentiment_very_satisfied</mat-icon>
+    <div class="goto-about"  (click)="about()" >
+        <mat-icon style="color:darkmagenta"  *ngIf="!mA[0]" >sentiment_very_satisfied</mat-icon>
+        <mat-icon *ngIf="mA[0]" >close</mat-icon>
+ 
+    </div>
    
 </div>

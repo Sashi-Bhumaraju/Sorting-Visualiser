@@ -22,7 +22,8 @@
               "src/favicon.ico",
               "src/assets/dog.wav",
               "src/assets",
-              "src/assets/tv.png"
+              "src/assets/tv.png",
+              "src/assets/sasi.jpg"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
