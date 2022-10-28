@@ -48,7 +48,7 @@ table{
     /* vertical-align: center; */
    
     width: calc(100% - 40px) ;
-    height: calc(100%  - 200px - 50px - 40px);
+    height: calc(100%  - 200px - 50px - 80px);
     /* background-color: #ffe0ff; */
     background-color: white;
     margin-bottom: 60px;
