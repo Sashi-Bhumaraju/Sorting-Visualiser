@@ -48,7 +48,8 @@ table{
     /* vertical-align: center; */
    
     width: calc(100% - 40px) ;
-    height: calc(100%  - 200px - 50px - 40px);
+
+    /* height: calc(100%  - 200px - 50px - 40px); */
     /* background-color: #ffe0ff; */
     background-color: white;
     margin-bottom: 60px;
@@ -221,6 +222,7 @@ input[type="range"] {
         height: 40px;
         background-color: darkmagenta;
         margin-top: 20px;
+        margin-bottom: 40px;
         border-radius: 10px;
         display: flex;
         vertical-align: center;
