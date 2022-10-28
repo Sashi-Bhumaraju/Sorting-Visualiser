@@ -16,6 +16,7 @@ import { MobileComponent } from './mobile/mobile.component';
 import { MatSliderModule} from '@angular/material/slider';
 import { MatListModule} from '@angular/material/list';
 import {ScrollingModule} from '@angular/cdk/scrolling'
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling'
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     MatListModule,
-    ScrollingModule
+    ScrollingModule,
+    MatIconModule
     // MatSliderModule
   ],
   providers: [],
