@@ -2,11 +2,12 @@
 <div class="mobile-body" >
     <app-mobile-header></app-mobile-header>
 
-    <div class="nothing" *ngIf="!mA[0]"  >
+   
         <app-mobile-body></app-mobile-body>
         <app-mobile-bottom-nav></app-mobile-bottom-nav>
-    </div>
-    <div class="nothing" *ngIf="mA[0]"  >
+ 
+
+    <div class="about" *ngIf="mA[0]"  >
         <app-mobile-about></app-mobile-about>
     </div>
 
