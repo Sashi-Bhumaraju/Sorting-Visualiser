@@ -12,7 +12,7 @@ export class ApplicationStateService {
 
  static  getIsMobileResolution(): boolean {
 
-    if (window.innerWidth < 480) {
+    if (window.innerWidth < 950) {
         this.isMobileResolution = true;
         isMobile[0]=true;
       } else {
