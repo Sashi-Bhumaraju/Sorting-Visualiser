@@ -21,9 +21,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets/dog.wav",
+              "src/assets/instagram.svg",
               "src/assets",
               "src/assets/tv.png",
-              "src/assets/sasi.jpg"
+              "src/assets/sasi.jpg",
+              "src/assets/all.min.css",
+              "src/assets/fontawesome.min.css",
+              "src/assets/facebook.svg",
+              "src/assets/twitter.svg",
+              "src/assets/google.svg"
+
+
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",

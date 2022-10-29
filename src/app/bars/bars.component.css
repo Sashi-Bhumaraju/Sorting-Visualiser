@@ -11,7 +11,8 @@
      /* margin: 10px; */
      padding-top: 50px;
      /* margin-top: 50px; */
-     background-color: #ffe0ff;
+     /* background-color: #ffe0ff; */
+     margin-bottom: 100px;
 }
 
 .bar{
@@ -106,15 +107,46 @@ p{
 .tail{
   
   width:100%;
-  height:100px;
+  height:110px;
   background-color: darkmagenta;
+  display: flex;
+  font-family: 'Prompt', sans-serif;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-around; */
+  position: fixed;
+  bottom: 0;
+
 }
-h2{
-  width: 100%;
-  height: 100px;
-  padding: 40px;
-  text-align: center;
+
+.link{
+  display: flex;
+  font-family: 'Prompt', sans-serif;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.name{
+  /* margin-top: 0px;
+  margin-bottom: 20px; */
+  font-weight: 500;
   color: white;
-  
- /* margin-top: 50px; */
+  font-size: 19px;
+  margin-left: 30px;
+  margin-right: 450px;
+
 }
+
+
+.iconX{
+  padding: 20px;
+}
+

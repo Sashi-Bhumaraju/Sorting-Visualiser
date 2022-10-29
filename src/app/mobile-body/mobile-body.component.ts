@@ -17,10 +17,10 @@ export class MobileBodyComponent implements OnInit {
 
   ngOnInit(): void {
     GenerateBarNodeArray.build();
-    from(BarNodeArray).subscribe(()=>{
-      this.bars =BarNodeArray;
+    // from(BarNodeArray).subscribe(()=>{
+    //   this.bars =BarNodeArray;
 
-    });
+    // });
 
   }
 

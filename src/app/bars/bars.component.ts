@@ -26,9 +26,7 @@ export class BarsComponent implements OnInit {
   
     console.log(Speed[0]/1000)
     from(Speed).subscribe(()=>{
-      this.S = Speed
-    
-      
+      this.S = Speed  
     })
 
     

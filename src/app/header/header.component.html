@@ -6,15 +6,15 @@
       <table>
         <tr>
           <td>  <div class="logo" (click)="goToOpeningPage()">SORTING-VISUALISER</div></td>
-          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">NEW ARRAY</div>
+          <td>   <div class="buildNewArray" [ngStyle]="{  'color': 'green' , 'cursor' : default[0].isRunning? 'no-drop':'pointer'}"   (click)="buildNewArray()">New Array</div>
           </td>
-          <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black','font-weight':default[0].isMergeSort? 'bold':'normal'}" (click)="mergeSort()">MERGE-SORT</div>
+          <td>  <div class="sortType" [ngStyle]="{'color': default[0].isMergeSort? 'darkmagenta':'black','font-weight':default[0].isMergeSort? 'bold':'normal'}" (click)="mergeSort()">Merge </div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black','font-weight':default[0].isQuickSort? 'bold':'normal'}" (click)="quickSort()">QUICK-SORT</div>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isQuickSort? 'darkmagenta':'black','font-weight':default[0].isQuickSort? 'bold':'normal'}" (click)="quickSort()">Quick </div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black','font-weight':default[0].isBubbleSort? 'bold':'normal'}" (click)="bubbleSort()">BUBBLE-SORT </div>
+          <td>  <div class="sortType"  [ngStyle]="{'color':default[0].isBubbleSort? 'darkmagenta':'black','font-weight':default[0].isBubbleSort? 'bold':'normal'}" (click)="bubbleSort()">Bubble</div>
           </td>
-          <td>  <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black','font-weight':default[0].isInsertionSort? 'bold':'normal'}" (click)="insertionSort()">INSERTION-SORT</div>
+          <td>  <div class="sortType"  [ngStyle]="{'color': default[0].isInsertionSort?'darkmagenta':'black','font-weight':default[0].isInsertionSort? 'bold':'normal'}" (click)="insertionSort()">Insertion</div>
           </td>
         </tr>   
       </table>
