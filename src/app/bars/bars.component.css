@@ -18,9 +18,10 @@
 .bar{
     width: 35px; 
     /* width: 100%; */
-    background-color:orange;
+    background-color:turquoise;
     margin: 1px;
-    box-shadow: 0px 0px 10px black;}
+    box-shadow: 0px 0px 10px black;
+  }
 
 td {
   height: 387px;
