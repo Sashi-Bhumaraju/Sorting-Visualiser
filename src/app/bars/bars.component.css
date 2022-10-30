@@ -12,7 +12,7 @@
      padding-top: 50px;
      /* margin-top: 50px; */
      /* background-color: #ffe0ff; */
-     margin-bottom: 100px;
+     margin-bottom: 210px;
 }
 
 .bar{
@@ -151,3 +151,12 @@ p{
   padding: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .bar{
+    width: 15px; 
+    /* width: 100%; */
+    background-color:turquoise;
+    margin: 0.3px;
+    box-shadow: 0px 0px 5px black;
+  }
+}

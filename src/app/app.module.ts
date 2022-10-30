@@ -18,6 +18,7 @@ import { MatListModule} from '@angular/material/list';
 import {ScrollingModule} from '@angular/cdk/scrolling'
 import {MatIconModule} from '@angular/material/icon';
 import { MobileAboutComponent } from './mobile-about/mobile-about.component';
+import { MobileBottomNavvComponent } from './mobile-bottom-navv/mobile-bottom-navv.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MobileAboutComponent } from './mobile-about/mobile-about.component';
     MobileBodyComponent,
     MobileComponent,
     MobileAboutComponent,
+    MobileBottomNavvComponent,
   
   ],
   imports: [

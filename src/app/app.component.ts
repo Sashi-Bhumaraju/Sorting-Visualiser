@@ -7,8 +7,9 @@ import { ApplicationStateService } from 'services/application-state.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'Sorting-Visualiser';
+  
 
   isM = ApplicationStateService.getIsMobileResolution();  
   ngOnInit(){

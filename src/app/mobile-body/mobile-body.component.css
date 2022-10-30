@@ -30,9 +30,10 @@
 .bar{
     width: 15px; 
     /* width: 100%; */
-    background-color:orange;
+    background-color:turquoise;
     margin: 0.4px;
-    box-shadow: 0px 0px 5px white;}
+    box-shadow: 0px 0px 5px black;
+  }
 
 td {
   height: 78px;
