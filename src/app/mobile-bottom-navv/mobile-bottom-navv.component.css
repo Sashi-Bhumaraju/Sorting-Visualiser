@@ -15,7 +15,7 @@
 .sort{
     width: 70px;
     height: 70px;
-    background-color: turquoise;
+    background-color: darkmagenta;
     position: absolute;
     margin-left: 0px;
     margin-right: 0px;
@@ -52,6 +52,6 @@
     font-weight: bold;
 }
 .u{
-    background-color: darkmagenta;
+    background-color: turquoise;
     color: white;
 }
