@@ -84,6 +84,7 @@
     margin-top: -2px;
     /* padding-right: 15px; */
     margin-left:  calc((100vw /2 - 152px));
+    font-family: 'Prompt', sans-serif;
 }
 
 .user-toast::after {
@@ -126,6 +127,7 @@
   width: 90px;
   height: 23px;
   margin-bottom: 10px;
+  font-family: 'Prompt', sans-serif;
 }
 
 .tv

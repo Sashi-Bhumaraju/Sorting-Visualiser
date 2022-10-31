@@ -58,41 +58,43 @@ export class LandingPageComponent implements OnInit {
   }
 
   goToMain():void{
-    setTimeout(()=>
-    {
-      if(this.showTv[0]==false)
-         {
-          audio.pause();
+  
+    // setTimeout(()=>
+    // {
+      // if(this.showTv[0]==false)
+      //    {
+      //     audio.pause();
 
-          if(stopTipp[0]==false)
-          {
-            Tip.length=0
-            Tip.push(true)
-          }
+      //     if(stopTipp[0]==false)
+      //     {
+      //       Tip.length=0
+      //       Tip.push(true)
+      //     }
         
-          return;
-         }
-      Tv.length=0;
-      Tv.push(false);
-      if(Tip[0]==false)
-      {
-        Tip.length=0
-        Tip.push(true)
-      }
+      //     return;
+      //    }
+      // Tv.length=0;
+      // Tv.push(false);
+      // if(Tip[0]==false)
+      // {
+      //   Tip.length=0
+      //   Tip.push(true)
+      // }
     
 
-    },30000)
+    // },30000)
     
-    audio.src= "https://github.com/sasibhumaraju/Sorting-Visualiser/blob/main/docs/assets/dog.wav?raw=true";
-              //  "https://github.com/sasibhumaraju/Sorting-Visualiser/blob/main/docs/assets/dog.wav?raw=true"
-    audio.load();
-    audio.play();
+    // audio.src= "https://github.com/sasibhumaraju/Sorting-Visualiser/blob/main/docs/assets/dog.wav?raw=true";
+    //           //  "https://github.com/sasibhumaraju/Sorting-Visualiser/blob/main/docs/assets/dog.wav?raw=true"
+    // audio.load();
+    // audio.play();
   //  a.controls;
-
-  this.open=false
   // Tip.length=0
   // Tip.push(true)
-  Tv.length=0
-  Tv.push(true)
+  // Tv.length=0
+  // Tv.push(true)
+  this.open=false
+  Tip.length=0
+  Tip.push(true)
   }
 }
