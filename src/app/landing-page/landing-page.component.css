@@ -140,12 +140,32 @@ table
    /* border: 2px solid black; */
     background-color: white;
     border-radius: 60px;
-    width:495px;
+    border-top-left-radius: 3px;
+    width:485px;
     height: 250px;
     /* box-shadow: 0px 0px 10px 5px black; */
     filter: drop-shadow( 10px 15px 100px  rgb(34, 34, 34));
+    border-top: 6px solid turquoise
+    /* border-left: 6px solid rgb(72, 70, 87); */
    
 }
+
+.user-card::after{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  top: -6px;
+  left: -55px;
+  z-index: -100;
+  border-top-left-radius: 3px;
+  /* border: 6px solid rgb(59, 59, 59); */
+  border-left: 6px solid rgb(72, 70, 87);
+  border-top: 6px solid turquoise
+  
+}
+
 .card-holder{
   position: fixed;
   width: 100%;
@@ -164,7 +184,7 @@ table
     color: turquoise;
     height: 330px;
     margin-top: -40px;
-    margin-left: -440px;
+    margin-left: -450px;
     /* box-shadow: 0px 0px 8px 5px black; */
    
 }
