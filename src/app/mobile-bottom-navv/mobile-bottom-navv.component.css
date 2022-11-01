@@ -77,7 +77,8 @@
 
 
 .hover-animation{
-    animation: hover 5s infinite;
+    animation: hover 3s infinite;
+    animation-timing-function: ease-in-out;
     top: 0px;
 }
 
@@ -94,7 +95,7 @@ transform: translateY(3in); */
   }
 
   @keyframes hover{
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+    0% { transform: translate(0px,  0px); }
+    50%  { transform: translate(0px, 35px); }
+    100%   { transform: translate(0px, -0px); }   
   }
