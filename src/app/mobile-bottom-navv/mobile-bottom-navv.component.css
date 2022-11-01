@@ -21,6 +21,7 @@
     margin-left: 0px;
     margin-right: 0px;
       margin-top: -78px;
+   
     border-radius: 50%;
     /* border: 3px solid white; */
     display: flex;
@@ -73,3 +74,27 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+
+.hover-animation{
+    animation: hover 5s infinite;
+    top: 0px;
+}
+
+/* transform: translateX(2em);
+transform: translateY(3in); */
+
+@keyframes hover1 {
+  0% { transform: translateY(15px);}
+  20%  { transform: translateY(0px);}
+  40%  { transform: translateY(15px);}
+  60%  { transform: translateY(0px); }
+  80%  { transform: translateX(-5px)}
+  100% { transform: translateY(10px)}
+  }
+
+  @keyframes hover{
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+  }
