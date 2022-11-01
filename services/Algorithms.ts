@@ -4,9 +4,11 @@ import { ElementRef } from "@angular/core";
 import { BarNode } from "models/BarNode";
 import { BarNodeArray } from "models/BarNodeArray"
 import { SetDefault } from "models/SetDefault";
+import { SGA } from "models/ShowGenerateArray";
 import { AnimateDistance, Speed } from "models/Speed";
 import { from, partition, repeat } from "rxjs";
 import { HeaderComponent } from "src/app/header/header.component";
+import { ApplicationStateService } from "./application-state.service";
 
 export class Algorithms{
 
@@ -65,6 +67,8 @@ export class Algorithms{
            }
            if(n==1)
            {
+            SGA.length = 0;
+            SGA.push(true);
 
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
@@ -134,6 +138,8 @@ export class Algorithms{
 
             if(i==l)
             {
+              SGA.length = 0;
+            SGA.push(true);
               BarNodeArray.map((v)=>v.color='N')
               SetDefault.length = 0;
               SetDefault.push({
@@ -377,6 +383,8 @@ console.log(BarNodeArray,"sashi")
           n++;
           if(n==animationArray.length)
           {
+            SGA.length = 0;
+            SGA.push(true);
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
             SetDefault.push({
@@ -498,6 +506,8 @@ console.log(BarNodeArray)
           n++;
           if(n==animationArray.length)
           {
+            SGA.length = 0;
+            SGA.push(true);
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
             SetDefault.push({
@@ -576,6 +586,11 @@ console.log(BarNodeArray)
         let temp = BarNodeArray[currentIndex].height;
         BarNodeArray[currentIndex].height=BarNodeArray[targetIndex].height;
         let t = Math.abs(currentIndex-targetIndex)*36;
+
+        if(ApplicationStateService.getIsMobileResolution())
+        {
+          t =  Math.abs(currentIndex-targetIndex)*15.4;
+        }
         AnimateDistance.next(t);
         BarNodeArray[targetIndex].height=temp;
 

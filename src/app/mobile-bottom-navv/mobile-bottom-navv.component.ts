@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
+import { SGA } from 'models/ShowGenerateArray';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
 import { Speed } from 'models/Speed';
@@ -22,6 +23,7 @@ export class MobileBottomNavvComponent implements OnInit {
   showTv:boolean[]=Tv;
   showSpeed:boolean=false;
   isCompleteTip:boolean=true;
+  showGenerateArrayButton:boolean[]=SGA;
   constructor() { }
 
   ngOnInit(): void {
@@ -34,6 +36,12 @@ export class MobileBottomNavvComponent implements OnInit {
   }
 
   buildNewArray():void{
+
+
+    from(SGA).subscribe((v)=>{
+      this.showGenerateArrayButton = SGA;
+    })
+
     if( this.default[0].isRunning)
       {
         this.showToast=true
@@ -48,6 +56,7 @@ export class MobileBottomNavvComponent implements OnInit {
   mergeSort():void{
     if( !this.default[0].isRunning)
     {
+      this.showGenerateArrayButton[0] = false;
       this.default[0].isRunning=true
       this.default[0].isMergeSort= true;
       Algorithms.mergeSort();
@@ -58,6 +67,7 @@ export class MobileBottomNavvComponent implements OnInit {
   quickSort():void{
     if( !this.default[0].isRunning)
     {
+      this.showGenerateArrayButton[0] = false;
       this.default[0].isRunning=true
       this.default[0].isQuickSort = true;
       Algorithms.quickSort();
@@ -68,6 +78,7 @@ export class MobileBottomNavvComponent implements OnInit {
   insertionSort():void{
     if( !this.default[0].isRunning)
     {
+      this.showGenerateArrayButton[0] = false;
       this.default[0].isRunning=true
       this.default[0].isInsertionSort = true;
       Algorithms.insertionSort();
@@ -77,6 +88,7 @@ export class MobileBottomNavvComponent implements OnInit {
   bubbleSort():void{
     if( !this.default[0].isRunning)
     {
+      this.showGenerateArrayButton[0] = false;
       this.default[0].isRunning=true
       this.default[0].isBubbleSort = true;
       Algorithms.bubbleSort();

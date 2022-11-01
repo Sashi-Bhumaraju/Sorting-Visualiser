@@ -1,12 +1,12 @@
 <div class="bottom-nav">
-    <div class="sort-type " (click)="mergeSort()" >M <div class="r"> merge </div> </div>
-    <div class="sort-type u"  (click)="quickSort()">Q <div class="r"> quick </div></div>
+    <div [ngClass]="default[0].isMergeSort? ['sort-type','u' ] : ['sort-type']" (click)="mergeSort()" >M <div class="r"> merge </div> </div>
+    <div  [ngClass]="default[0].isQuickSort? ['sort-type','u' ] : ['sort-type']"  (click)="quickSort()">Q <div class="r"> quick </div></div>
   
-    <div class="sort-type"  (click)="bubbleSort()"> B <div class="r"> bubble </div></div>
-    <div class="sort-type"  (click)="insertionSort()"> I <div class="r"> insertion </div></div>
+    <div  [ngClass]="default[0].isBubbleSort? ['sort-type','u' ] : ['sort-type']" (click)="bubbleSort()"> B <div class="r"> bubble </div></div>
+    <div  [ngClass]="default[0].isInsertionSort? ['sort-type','u' ] : ['sort-type']" (click)="insertionSort()"> I <div class="r"> insertion </div></div>
 
 
-    <div class="sort animate__animated  animate__flipInX" (click)="buildNewArray()"><img src="assets/plus.svg" alt="new" style="width: 25px; height:25px"> </div>
+    <div [ngClass]=" showGenerateArrayButton[0]? ['sort',  'animate__animated',  'animate__flipInX'] : ['sort', 'animate__animated',  'animate__flipOutX' ]"  (click)="buildNewArray()"><img src="assets/plus.svg" alt="new" style="width: 25px; height:25px"> </div>
    
 </div>
 
