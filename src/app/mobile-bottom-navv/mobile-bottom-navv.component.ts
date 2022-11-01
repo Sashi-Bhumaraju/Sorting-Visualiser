@@ -4,6 +4,7 @@ import { SetDefault } from 'models/SetDefault';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
 import { Speed } from 'models/Speed';
+import { from } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
 
@@ -24,6 +25,12 @@ export class MobileBottomNavvComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    from(SetDefault).subscribe((v)=>{
+      // console.log("inside setdeafault"+v.isBubbleSort)
+      this.default = SetDefault;
+  
+      }); 
   }
 
   buildNewArray():void{
