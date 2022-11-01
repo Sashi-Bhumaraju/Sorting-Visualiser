@@ -88,13 +88,13 @@
 transform: translateY(3in); */
 
 @keyframes hover {
-  0%   { opacity: 0.5;transform: translate(0px,  0px);}
+  0%   { opacity: 0.9;transform: translate(0px,  0px);}
   /* 20%  { opacity: 0.5}
   40%  { opacity: 1}
   60%  { opacity: 0.5 }
   80%  { opacity: 0} */
   50% { opacity: 1; transform: translate(0px, 2px); }
-  100% { opacity: 0.5;transform:translate(0px, -0px);}
+  100% { opacity: 0.9;transform:translate(0px, -0px);}
   }
 
   @keyframes hover2{
