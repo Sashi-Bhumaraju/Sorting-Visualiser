@@ -6,7 +6,7 @@
     <div  [ngClass]="default[0].isInsertionSort? ['sort-type','u' ] : ['sort-type']" (click)="insertionSort()"> I <div class="r"> insertion </div></div>
 
 
-    <div [ngClass]="  ['sort',   'animate__animated',  showGenerateArrayButton[0]?  'animate__flipInX' : 'null',   showGenerateArrayButton[2]?  'animate__fadeOutDown' : 'null' ]  "  (click)="buildNewArray()"><img  [ngClass]="[ 'animate__animated', showGenerateArrayButton[1]?  'hover-animation' : 'null']" src="assets/plus.svg" alt="new" style="width: 25px; height:25px"> </div>
+    <div [ngClass]="  ['sort',   'animate__animated',  showGenerateArrayButton[0]?  'animate__flipInX' : 'null',   showGenerateArrayButton[2]?  'animate__flipOutX' : 'null' ]  "  (click)="buildNewArray()"><img  [ngClass]="[ 'animate__animated', showGenerateArrayButton[1]?  'hover-animation' : 'null']" src="assets/plus.svg" alt="new" style="width: 25px; height:25px"> </div>
    
 </div>
 
