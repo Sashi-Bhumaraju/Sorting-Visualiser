@@ -5,6 +5,7 @@ import { SGA, sortButton } from 'models/ShowGenerateArray';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
 import { Speed } from 'models/Speed';
+import { Stop } from 'models/Stop';
 import { from } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
@@ -92,43 +93,76 @@ export class MobileBottomNavvComponent implements OnInit {
 
 
   mergeSort():void{
-    if( !this.default[0].isRunning)
+   
     {
+      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      {
+        this.default[0].isRunning=false;
+        Stop[0]=true;
+      }
+      else{
+        this.buildNewArray()
+      }
+      
       sortButton(0);
       this.i=0;
-      this.buildNewArray()
+   
      
     }
   }
 
 
   quickSort():void{
-    if( !this.default[0].isRunning)
+   
     {
+      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      {
+        this.default[0].isRunning=false;
+        Stop[0]=true;
+      }
+      else{
+        this.buildNewArray()
+      }
       sortButton(0); 
       this.i=1;
-      this.buildNewArray()
+    
     
     }
   }
   
 
   insertionSort():void{
-    if( !this.default[0].isRunning)
+   
     {
+      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      {
+        this.default[0].isRunning=false;
+        Stop[0]=true;
+      }
+      else{
+        this.buildNewArray()
+      }
       sortButton(0);
       this.i=3;
-      this.buildNewArray()
+   
      
     }
   }
 
   bubbleSort():void{
-    if( !this.default[0].isRunning)
+   
     {
+      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      {
+        this.default[0].isRunning=false;
+        Stop[0]=true;
+      }
+      else{
+        this.buildNewArray()
+      }
       sortButton(0);
       this.i=2;
-      this.buildNewArray()
+     
      
     }
  }

@@ -6,9 +6,11 @@ import { BarNodeArray } from "models/BarNodeArray"
 import { SetDefault } from "models/SetDefault";
 import { SGA, sortButton } from "models/ShowGenerateArray";
 import { AnimateDistance, Speed } from "models/Speed";
+import { Stop } from "models/Stop";
 import { from, partition, repeat } from "rxjs";
 import { HeaderComponent } from "src/app/header/header.component";
 import { ApplicationStateService } from "./application-state.service";
+import { GenerateBarNodeArray } from "./GenerateBarNodeArray";
 
 export class Algorithms{
 
@@ -27,6 +29,12 @@ export class Algorithms{
         // console.log("inside reat"+l)
         setTimeout(()=>
         {
+
+        if( Stop[0] == true ){
+        Stop[0]=false;
+          GenerateBarNodeArray.build()    
+          return
+        }  
 
           if(j == n)
           {
@@ -100,7 +108,11 @@ export class Algorithms{
          
 
         setTimeout(()=>{
-
+          if( Stop[0] == true ){
+          Stop[0]=false;
+          GenerateBarNodeArray.build()    
+            return
+          }  
          
           if( j>=0 && BarNodeArray[j].height > BarNodeArray[j+1].height )
           {
@@ -350,6 +362,12 @@ console.log(BarNodeArray,"sashi")
 
    ( function repeat(){
       setTimeout(()=>{
+        if( Stop[0] == true ){
+          Stop[0]=false;
+        
+          GenerateBarNodeArray.build()    
+          return
+        }  
         console.log(currentIndex,targetIndex, + "lllllllllllllllllllllllll")
         if(targetIndex !== currentIndex)
         {
@@ -498,6 +516,12 @@ console.log(BarNodeArray)
    function repeat():void{
 
         setTimeout(()=>{
+          if( Stop[0] == true )
+          {
+          Stop[0]=false;
+          GenerateBarNodeArray.build()    
+            return
+          }  
     
         do{
           n++;
