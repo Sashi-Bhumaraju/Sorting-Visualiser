@@ -1,9 +1,8 @@
 <div class="bottom-nav">
-    <div [ngClass]="i==0?     ['sort-type','u' ] : ['sort-type']" (click)="mergeSort()" >M <div class="r"> merge </div> </div>
-    <div [ngClass]="i==1?     ['sort-type','u' ] : ['sort-type']"  (click)="quickSort()">Q <div class="r"> quick </div></div>
-    <div [ngClass]="i==2?    ['sort-type','u' ] : ['sort-type']" (click)="bubbleSort()"> B <div class="r"> bubble </div></div>
-    <div [ngClass]="i==3? ['sort-type','u' ] : ['sort-type']" (click)="insertionSort()"> I <div class="r"> insertion </div></div>
-
+    <div [ngClass]="(i==0 && showGenerateArrayButton[0])?     ['sort-type','u' ] : ['sort-type']" (click)="mergeSort()" >M <div class="r"> merge </div> </div>
+    <div [ngClass]="(i==1 && showGenerateArrayButton[0])?     ['sort-type','u' ] : ['sort-type']"  (click)="quickSort()">Q <div class="r"> quick </div></div>
+    <div [ngClass]="(i==2 && showGenerateArrayButton[0])?    ['sort-type','u' ] : ['sort-type']" (click)="bubbleSort()"> B <div class="r"> bubble </div></div>
+    <div [ngClass]="(i==3 && showGenerateArrayButton[0])?  ['sort-type','u' ] : ['sort-type']" (click)="insertionSort()"> I <div class="r"> insertion </div></div>
 
     <div [ngClass]="  ['sort',   'animate__animated',  showGenerateArrayButton[0]?  'animate__flipInX' : 'null',   showGenerateArrayButton[1]?  'animate__flipOutX' : 'null' ]  "  (click)="sortIt()"><img  [ngClass]="[ 'animate__animated',default[0].isRunning?  'hover-animation' : 'null']" src="assets/plus.svg" alt="new" style="width: 25px; height:25px"> </div>
    
