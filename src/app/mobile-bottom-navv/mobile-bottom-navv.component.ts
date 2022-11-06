@@ -24,9 +24,14 @@ export class MobileBottomNavvComponent implements OnInit {
   showSpeed:boolean=false;
   isCompleteTip:boolean=true;
   showGenerateArrayButton:boolean[] = SGA;
+  i:number | undefined;
   constructor() { }
 
   ngOnInit(): void {
+
+    from(SGA).subscribe(()=>{
+      this.showGenerateArrayButton = SGA;
+    })
 
     from(SetDefault).subscribe((v)=>{
       // console.log("inside setdeafault"+v.isBubbleSort)
@@ -35,12 +40,43 @@ export class MobileBottomNavvComponent implements OnInit {
       }); 
   }
 
+  sortIt():void{
+
+    if( !this.default[0].isRunning)
+    switch(this.i){
+    case 0: {
+      this.default[0].isRunning=true
+      this.default[0].isMergeSort= true;
+      Algorithms.mergeSort();
+            break;}
+
+    case 1: {
+      this.default[0].isRunning=true
+      this.default[0].isQuickSort = true;
+
+      Algorithms.quickSort();
+           break;}
+
+    case 3: {
+      this.default[0].isRunning=true
+      this.default[0].isInsertionSort = true;
+      Algorithms.insertionSort();
+           break;}
+
+    case 2: {
+      this.default[0].isRunning=true
+      this.default[0].isBubbleSort = true;
+      Algorithms.bubbleSort();
+            break;}
+
+    }
+
+  }
+
   buildNewArray():void{
 
 
-    from(SGA).subscribe(()=>{
-      this.showGenerateArrayButton = SGA;
-    })
+  
 
     if( this.default[0].isRunning)
       {
@@ -52,36 +88,16 @@ export class MobileBottomNavvComponent implements OnInit {
       }
   }
 
-  // sortButton(i:number){
-  //   switch(i){
-  //     case 0:{
-  //       SGA[0]=true;
-  //       SGA[1]=false;
-  //       SGA[2]=false;
-
-  //     } break;
-  //     case 1:{
-  //       SGA[0]=false;
-  //       SGA[1]=true;
-  //       SGA[2]=false;
-  //     } break;
-  //     case 2:{
-  //       SGA[0]=false;
-  //       SGA[1]=false;
-  //       SGA[2]=true;
-  //     } break;
-  //   }
-
-  // }
+ 
 
 
   mergeSort():void{
     if( !this.default[0].isRunning)
     {
-      sortButton(1);
-      this.default[0].isRunning=true
-      this.default[0].isMergeSort= true;
-      Algorithms.mergeSort();
+      sortButton(0);
+      this.i=0;
+      this.buildNewArray()
+     
     }
   }
 
@@ -89,10 +105,10 @@ export class MobileBottomNavvComponent implements OnInit {
   quickSort():void{
     if( !this.default[0].isRunning)
     {
-      sortButton(1); 
-      this.default[0].isRunning=true
-      this.default[0].isQuickSort = true;
-      Algorithms.quickSort();
+      sortButton(0); 
+      this.i=1;
+      this.buildNewArray()
+    
     }
   }
   
@@ -100,20 +116,20 @@ export class MobileBottomNavvComponent implements OnInit {
   insertionSort():void{
     if( !this.default[0].isRunning)
     {
-      sortButton(1);
-      this.default[0].isRunning=true
-      this.default[0].isInsertionSort = true;
-      Algorithms.insertionSort();
+      sortButton(0);
+      this.i=3;
+      this.buildNewArray()
+     
     }
   }
 
   bubbleSort():void{
     if( !this.default[0].isRunning)
     {
-      sortButton(1);
-      this.default[0].isRunning=true
-      this.default[0].isBubbleSort = true;
-      Algorithms.bubbleSort();
+      sortButton(0);
+      this.i=2;
+      this.buildNewArray()
+     
     }
  }
 

@@ -67,7 +67,7 @@ export class Algorithms{
            }
            if(n==1)
            {
-            sortButton(2);
+            sortButton(1);
 
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
@@ -137,7 +137,7 @@ export class Algorithms{
 
             if(i==l)
             {
-              sortButton(2);
+              sortButton(1);
               BarNodeArray.map((v)=>v.color='N')
               SetDefault.length = 0;
               SetDefault.push({
@@ -381,7 +381,7 @@ console.log(BarNodeArray,"sashi")
           n++;
           if(n==animationArray.length)
           {
-            sortButton(2);
+            sortButton(1);
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
             SetDefault.push({
@@ -503,7 +503,7 @@ console.log(BarNodeArray)
           n++;
           if(n==animationArray.length)
           {
-            sortButton(2);
+            sortButton(1);
             BarNodeArray.map((v)=>v.color='N')
             SetDefault.length = 0;
             SetDefault.push({
