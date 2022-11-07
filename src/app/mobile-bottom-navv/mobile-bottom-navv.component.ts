@@ -19,7 +19,7 @@ export class MobileBottomNavvComponent implements OnInit {
 
   default:Deafault[]=SetDefault;
   showToast:boolean=false
-  showTip:boolean[]=Tip;
+  showTip:boolean[]=Tip;;
   valueU:number=Speed[0];
   showTv:boolean[]=Tv;
   showSpeed:boolean=false;
