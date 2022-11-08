@@ -67,7 +67,7 @@
     padding: 5px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 0px solid transparent;
+    border: 2px solid transparent;
     border-radius: 4px;
     box-sizing: border-box;
     
@@ -76,10 +76,15 @@
     outline: none;
     /* background-color: lightblue; */
     display: inline-block;
-    border: 0px solid transparent;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    margin: 8px 0;
+    /* /* border-radius: 4px; */
+    box-sizing: border-box; 
+    caret-color: black;
+    
   }
+
 
 
   input[type=submit] {
@@ -96,6 +101,8 @@
     font-weight: 900;
     outline: none;
     border: 0;
+   
+  
   }
 
   .input-analysis{

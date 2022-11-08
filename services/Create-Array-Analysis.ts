@@ -7,7 +7,7 @@ export class Analysis{
 
 static isSame(inputnumbers:number[]):boolean{
     let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
-    let temp2 = temp1.sort()
+    let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return 1; else if(b>a) return -1; else return 0})
 
   console.log(inputnumbers)
   console.log(temp2)
@@ -18,11 +18,11 @@ static isSame(inputnumbers:number[]):boolean{
     }
      return true;
     
-}
+}       
 
 static isNearlySame(inputnumbers:number[]):boolean{
     let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
-    let temp2 = temp1.sort()
+    let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return 1; else if(b>a) return -1; else return 0})
 
     if(inputnumbers[0] != temp2[0] && inputnumbers[0] != temp2[1]) 
     { return false;}
@@ -42,7 +42,7 @@ static isNearlySame(inputnumbers:number[]):boolean{
     
 }
 
- static start(text:string):number{
+ static start(text:string):string{
 
  let inputnumbers:number[]=[];
  let temp = text.split(',') 
@@ -50,8 +50,10 @@ static isNearlySame(inputnumbers:number[]):boolean{
  {
     inputnumbers.push(+temp[i])
  }
-  if( this.isSame(inputnumbers)) { console.log("sameeeeee");  return 1;}
-  if( this.isNearlySame(inputnumbers)){console.log("nearly sameeeeee"); return 2;}
-  return 3;
+
+ if(inputnumbers.length<8){ return('input is very small so you can use mergesort quicksort insertion sort bubblesort no problem at all')}
+ else if( this.isSame(inputnumbers)) { console.log("sameeeeee");  return ('given input is already sorted so you can use insertion sort or merge sort');}
+ else if(this.isNearlySame(inputnumbers)){console.log("nearly sameeeeee"); return ('given input is nearly or almost sorted so you can use insertion sort or merge sort');}
+ else return ('given input is purely un sorted so you can use quick sort if there is less space in the disk if not you can use  merge sort ');
     }
 }

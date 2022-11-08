@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { AutoFocus } from 'src/app/create-array/autofocus.directive';
 import { Analysis } from 'services/Create-Array-Analysis';
 import { Speech, SpeechText } from 'services/Create-Array-Speech';
 import { CreateArrayValidate } from 'services/Create-Array-Validate';
@@ -14,15 +15,18 @@ export class CreateArrayComponent implements OnInit {
  sT:string = '';
 
 inputForm:FormGroup ;
-  constructor() { 
+  constructor(private ele:ElementRef) { 
+   
     this.inputForm = new FormGroup({
       inputArray: new FormControl(null,Validators.required),
     })
+    
   
   }
 
   ngOnInit(): void {
-
+   
+    
     SpeechText.subscribe((v)=>{
       this.sT=v;
     })
@@ -33,27 +37,39 @@ inputForm:FormGroup ;
       console.log("speech synthesis is not supported")
        // Speech Synthesis is not Supported 😞 
      }
-    this.getVoices("sasi nuvu manchidivi kaani me nannama manchidhi kadhuuu")
+    //  this.getVoices("sasi nuvu manchidivi kaani me nannama manchidhi kadhuuu")
    
     
 
   }
-   getVoices(text:string) {
+ static  getVoices(text:string) {
    
-
+    document.getElementById("inputArray").focus()
    
   
   }
   onSubmit() {
-    let text:string=this.inputForm.controls['inputArray'].value as string;
+    
+   let  text:any=this.inputForm.controls['inputArray'].value ;
     console.log(text)
+   
+  if(text == null)
+  {
+    // let speech = CreateArrayValidate.validateArray("enter atleast one input");
+    Speech.inputText('enter atleast one input')
+  }
+  else{
     let speech = CreateArrayValidate.validateArray(text);
-    Speech.inputText(speech)
     if(speech == "")
     {
-      Analysis.start(text)
+      Speech.inputText(Analysis.start(text) as string)
+    }
+    else{
+      Speech.inputText(speech)
     }
   
+  }
+   
  
   }
 

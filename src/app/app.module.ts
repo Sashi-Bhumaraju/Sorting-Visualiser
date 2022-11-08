@@ -23,6 +23,7 @@ import { CreateArrayComponent } from './create-array/create-array.component';
 import { FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutoFocus } from 'src/app/create-array/autofocus.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MobileAboutComponent,
     MobileBottomNavvComponent,
     CreateArrayComponent,
-  
+    AutoFocus
   ],
   imports: [
    
@@ -49,7 +50,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     ScrollingModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
    
     // MatSliderModule

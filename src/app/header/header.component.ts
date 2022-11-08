@@ -12,6 +12,7 @@ import { Stop } from 'models/Stop';
 import { from, of } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
+import { CreateArrayComponent } from '../create-array/create-array.component';
 
 @Component({
   selector: 'app-header',
@@ -213,6 +214,7 @@ sortIt():void{
     if ( this.isCompleteTip )
      this.repeat();
     this.isCompleteTip=false;
+    CreateArrayComponent.getVoices("")
  }
 
  flag=0;

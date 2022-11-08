@@ -59,7 +59,7 @@ export class BarsComponent implements OnInit {
      AnimateDistance.subscribe((v)=>{
       this.ele.nativeElement.style.setProperty('--left',-v+'px');
       this.ele.nativeElement.style.setProperty('--right',v+'px');
-      console.log(v,'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+      // console.log(v,'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
      })
   }
 
