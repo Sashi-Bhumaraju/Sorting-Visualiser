@@ -1,0 +1,33 @@
+<div class="createArray ">
+
+    <div class="createButon">
+        <img src="assets/right.svg" alt="">
+    </div>
+
+    <div class="create-text">
+        <div class="create">  CREATE</div>
+    </div>
+
+    <div class="input-analysis animate__animated animate__fadeInLeft">
+        <form  [formGroup]="inputForm" (ngSubmit)="onSubmit()" >
+            <div class="input-box ">
+                <input formControlName="inputArray" id="inputArray" type="text"  placeholder="enter comma seperated numbers">
+            </div>
+        <input type="submit" value="Go" >
+        </form>
+<div class="ai-card">
+        <div class="ai-result animate__animated animate__fadeInRight " style="  animation-duration: 2s;">
+            {{sT}}
+            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero dolore obcaecati? Reprehenderit, repudiandae totam repellat, magnam inventore dolorem ipsa accusantium, aperiam perspiciatis porro cupiditate eaque. Omnis consequuntur voluptatum pariatur! -->
+        </div>
+        <div class="robot">
+            <img src="assets/robot.svg" alt="">
+        </div>
+</div>
+      
+  
+    </div>
+    
+</div>
+
+

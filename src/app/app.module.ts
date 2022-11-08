@@ -19,7 +19,10 @@ import {ScrollingModule} from '@angular/cdk/scrolling'
 import {MatIconModule} from '@angular/material/icon';
 import { MobileAboutComponent } from './mobile-about/mobile-about.component';
 import { MobileBottomNavvComponent } from './mobile-bottom-navv/mobile-bottom-navv.component';
-
+import { CreateArrayComponent } from './create-array/create-array.component';
+import { FormControl } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,16 +36,22 @@ import { MobileBottomNavvComponent } from './mobile-bottom-navv/mobile-bottom-na
     MobileComponent,
     MobileAboutComponent,
     MobileBottomNavvComponent,
+    CreateArrayComponent,
   
   ],
   imports: [
+   
     BrowserModule,
     AppRoutingModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    CommonModule,
     MatListModule,
     ScrollingModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
+    
+   
     // MatSliderModule
   ],
   providers: [],
