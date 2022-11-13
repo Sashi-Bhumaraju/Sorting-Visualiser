@@ -85,7 +85,7 @@ export class MobileBottomNavvComponent implements OnInit {
         setTimeout(()=>{ this.showToast=false},2500);
       }
     else {
-            GenerateBarNodeArray.build()    
+            GenerateBarNodeArray.buildRandom()    
       }
   }
 

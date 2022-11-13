@@ -24,7 +24,7 @@ export class MobileBodyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    GenerateBarNodeArray.build();
+    GenerateBarNodeArray.buildRandom();
     from(BarNodeArray).subscribe(()=>{
       this.bars =BarNodeArray;
 
