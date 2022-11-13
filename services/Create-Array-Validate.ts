@@ -9,8 +9,8 @@ export class CreateArrayValidate{
     {
         let k = input.split(',');
 
-        if(k.length>20){
-            return('only 20 numbers are allowed to give input');
+        if(k.length>18){
+            return('only 18 numbers are allowed to give input');
         }
         
         for (let i=0; i<k.length ; i++)
@@ -29,8 +29,8 @@ export class CreateArrayValidate{
                 return('remove alphabets and special symbols in input but enter valid input numbers seperated by commas ')
             }
 
-            if(Number(k[i]) > 250 || Number(k[i]) < 20){
-                     return('input numbers should be range between 20 and 250')
+            if(Number(k[i]) > 200 || Number(k[i]) < 20){
+                     return('input numbers should be range between 20 and 200')
             }
         }
              return "";

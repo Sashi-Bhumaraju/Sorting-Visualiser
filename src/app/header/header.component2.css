@@ -32,9 +32,9 @@
    
     -webkit-appearance: none;
     background-color:darkmagenta ;
-    width: 12px;
+    width: 18px;
     height: 18px;
-    border-radius: 20%;
+    border-radius: 50%;
     border: 2px solid white;
     cursor: pointer;
     transition: .3s ease-in-out;

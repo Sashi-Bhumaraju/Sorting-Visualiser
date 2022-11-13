@@ -33,11 +33,14 @@ export class BarsComponent implements OnInit {
 
   } 
 
+  floor(i:any):number{
+  return Math.floor(i)
+  }
  
 
   ngOnInit(): void {
     
-    GenerateBarNodeArray.build();
+    GenerateBarNodeArray.buildRandom();
     from(BarNodeArray).subscribe(()=>{
       this.bars =BarNodeArray;
 

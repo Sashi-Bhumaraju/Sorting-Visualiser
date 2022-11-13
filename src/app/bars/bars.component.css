@@ -4,23 +4,30 @@
 {
   
     width:100%;
-    height: 400px;
+    height: 300px;
     /* overflow: hidden; */
     
     /* height: 100%; */
      /* margin: 10px; */
-     padding-top: 50px;
+     /* padding-top: 50px; */
      /* margin-top: 50px; */
      /* background-color: #ffe0ff; */
-     margin-bottom: 210px;
+     /* margin-bottom: 210px; */
 }
 
 .bar{
-    width: 35px; 
+    width: 40px; 
     /* width: 100%; */
     background-color:turquoise;
     margin: 1px;
     box-shadow: 0px 0px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 
 td {
@@ -108,7 +115,7 @@ p{
 .tail{
   
   width:100%;
-  height:110px;
+  height:100px;
   background-color: darkmagenta;
   display: flex;
   font-family: 'Prompt', sans-serif;
@@ -127,6 +134,7 @@ p{
   align-items: center;
   justify-content: space-around;
 
+
 }
 
 
@@ -140,7 +148,7 @@ p{
   margin-bottom: 20px; */
   font-weight: 500;
   color: white;
-  font-size: 19px;
+  font-size: 16px;
   margin-left: 30px;
   margin-right: 450px;
 
@@ -149,6 +157,7 @@ p{
 
 .iconX{
   padding: 20px;
+  
 }
 
 @media screen and (max-width: 900px) {
@@ -161,3 +170,7 @@ p{
   }
 }
 
+img{
+  width: 25px;
+  height: 25px;
+}

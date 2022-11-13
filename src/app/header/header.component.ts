@@ -117,6 +117,7 @@ sortIt():void{
   mergeSort():void{
    
     {
+     
       if(Stop[0] == false &&   this.default[0].isRunning==true)
       {
         this.default[0].isRunning=false;

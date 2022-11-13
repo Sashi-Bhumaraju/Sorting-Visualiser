@@ -79,32 +79,14 @@
 .hover-animation{
     animation: hover 3s infinite;
     animation-timing-function: ease-in-out;
-    /* margin-top: -108px; */
-    /* animation: pulse 3s infinite */
    
 }
 
-/* transform: translateX(2em);
-transform: translateY(3in); */
+
 
 @keyframes hover {
   0%   { opacity: 0.9;transform: translate(0px,  0px);}
-  /* 20%  { opacity: 0.5}
-  40%  { opacity: 1}
-  60%  { opacity: 0.5 }
-  80%  { opacity: 0} */
   50% { opacity: 1; transform: translate(0px, 2px); }
   100% { opacity: 0.9;transform:translate(0px, -0px);}
   }
 
-  @keyframes hover2{
-    0% { transform: translate(0px,  0px); }
-    50%  { transform: translate(0px, 10px); }
-    100%   { transform: translate(0px, -0px); }   
-  }
-
-  @keyframes hover1{
-    0% {opacity: 0.; }
-    50%  { opacity: 0.6; }
-    100%   { opacity: 1; }   
-  }

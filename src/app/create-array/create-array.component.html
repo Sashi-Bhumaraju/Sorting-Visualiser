@@ -1,30 +1,49 @@
 <div class="createArray ">
 
-    <div class="createButon">
-        <img src="assets/right.svg" alt="">
-    </div>
+    <!-- <div class="createButon">
+        <img style="width: 15px; height:15px" src="assets/right.svg" alt="">
+    </div> -->
 
-    <div class="create-text">
-        <div class="create">  CREATE</div>
-    </div>
+        <!-- <div class="create-text">
+            <div class="create">  CREATE</div>
+        </div> -->
 
     <div class="input-analysis animate__animated animate__fadeInLeft">
+
         <form  [formGroup]="inputForm" (ngSubmit)="onSubmit()" >
             <div class="input-box ">
                 <input    formControlName="inputArray"  id="inputArray" type="text"  placeholder="enter comma seperated numbers" >
             </div>
            
         <input type="submit" value="Go" >
+        <div class="random" (click)="generateArray()">
+            <div class="random-child"  >Random</div>
+         </div>
         </form>
-<div class="ai-card">
-        <div   class="ai-result animate__animated animate__fadeInRight " style="  animation-duration: 2s;">
-            {{sT}}
-            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero dolore obcaecati? Reprehenderit, repudiandae totam repellat, magnam inventore dolorem ipsa accusantium, aperiam perspiciatis porro cupiditate eaque. Omnis consequuntur voluptatum pariatur! -->
+
+     
+ 
+
+
+        <div class="ai-card">
+
+            <div class="ai-speed"  *ngIf="default[0].isRunning==true" >
+                <input [value]="valueU "   type="range" style=" z-index: 10;" min="200" max="1000" #ranger (input)=" yourMethod(ranger.value)">
+                <div class="speed-index" >
+                  <div class="speed-index-item">0.5x</div>
+                  <div class="speed-index-item">1.0x</div>
+                  <div class="speed-index-item">1.5x</div>
+                </div>
+            </div>
+            
+
+                <div   *ngIf="default[0].isRunning==false" class="ai-result  " style="  animation-duration: 2s;">
+                    {{sT}}
+                </div>
+                <!-- <div class="robot" style="filter: drop-shadow( 0px 0px 10px white );">
+                    <img  src="assets/robot.svg" alt="">
+                </div> -->
         </div>
-        <div class="robot">
-            <img src="assets/robot.svg" alt="">
-        </div>
-</div>
       
   
     </div>

@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     letter-spacing: 1.5px;
-    filter: drop-shadow( 2px 3px 2px  black);
+    /* filter: drop-shadow( 1px 2px 2px  black); */
 }
 
 h1{
@@ -137,17 +137,19 @@ table
     background-color: white;
     border-radius: 60px;
     border-top-left-radius: 3px;
-    width:485px;
+    width:545px;
     height: 250px;
     /* box-shadow: 0px 0px 10px 5px black; */
     filter: drop-shadow( 10px 15px 100px  rgb(34, 34, 34));
-    border-top: 6px solid turquoise
+    /* border-top: 6px solid turquoise;
+    border-left: 6px solid rgb(72, 70, 87);  */
     /* border-left: 6px solid rgb(72, 70, 87); */
+    
    
 }
 
 .user-card::after{
-  content: '';
+  /* content: ''; */
   position: absolute;
   width: 100px;
   height: 100px;

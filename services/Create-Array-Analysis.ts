@@ -4,10 +4,29 @@ import { sortButton } from "models/ShowGenerateArray";
 @Injectable()
 export class Analysis{
 
+    static isSameAsc(inputnumbers:number[]):boolean
+    {
+        let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
+        let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return 1; else if(b>a) return -1; else return 0})
+      
+    
+      console.log(inputnumbers)
+      console.log(temp2)
+        for(let i =0; i<temp2.length;i++)
+        {
+        if( inputnumbers[i] != temp2[i]){   
+             return false;}
+        }
+         return true;
 
-static isSame(inputnumbers:number[]):boolean{
-    let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
-    let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return 1; else if(b>a) return -1; else return 0})
+    }
+
+    static isSameDsc(inputnumbers:number[]):boolean
+    {
+    
+        let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
+    let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return -1; else if(b>a) return 1; else return 0})
+  
 
   console.log(inputnumbers)
   console.log(temp2)
@@ -17,10 +36,23 @@ static isSame(inputnumbers:number[]):boolean{
          return false;}
     }
      return true;
-    
+    }
+
+static isSame(inputnumbers:number[]):boolean{
+
+    if(   Analysis.isSameDsc(inputnumbers) || Analysis.isSameAsc(inputnumbers) )
+    {
+       return true
+    }
+    else{
+       return false
+    }   
 }       
 
-static isNearlySame(inputnumbers:number[]):boolean{
+
+
+static isNearlySameAsc(inputnumbers:number[]):boolean
+{
     let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
     let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return 1; else if(b>a) return -1; else return 0})
 
@@ -40,6 +72,44 @@ static isNearlySame(inputnumbers:number[]):boolean{
 
         return true;
     
+}
+
+
+
+static isNearlySameDsc(inputnumbers:number[]):boolean
+{
+    let temp1 :number[]=JSON.parse(JSON.stringify(inputnumbers))
+    let temp2 =temp1.sort((a:number,b:number)=>{ if(a>b) return -1; else if(b>a) return 1; else return 0})
+
+    if(inputnumbers[0] != temp2[0] && inputnumbers[0] != temp2[1]) 
+    { return false;}
+
+    for(let i =1; i<temp2.length-1;i++){   
+
+        if((inputnumbers[i] != temp2[i-1] && inputnumbers[i] != temp2[i] ) &&  inputnumbers[i] != temp2[i+1])
+        { 
+             return false; 
+              } }
+
+    if(inputnumbers[temp2.length-1] != temp2[temp2.length-1] && inputnumbers[temp2.length-1] != temp2[temp2.length-2]) 
+     {
+         return false; }
+
+        return true;
+    
+}
+
+
+
+
+static isNearlySame(inputnumbers:number[]):boolean{
+    if(   Analysis.isNearlySameDsc(inputnumbers) || Analysis.isNearlySameAsc(inputnumbers) )
+    {
+       return true
+    }
+    else{
+       return false
+    }   
 }
 
  static start(text:string):string{

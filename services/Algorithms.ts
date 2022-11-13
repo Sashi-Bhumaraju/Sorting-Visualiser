@@ -373,6 +373,7 @@ console.log(BarNodeArray,"sashi")
         {
           BarNodeArray[currentIndex].color='P';
           BarNodeArray[currentIndex].right = true;
+          console.log(targetIndex+" "+currentIndex+"mmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
           currentIndex-1!=0?  BarNodeArray[currentIndex-1].right = false: null;
           BarNodeArray[currentIndex-1].left=true
 

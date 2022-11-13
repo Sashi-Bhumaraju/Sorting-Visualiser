@@ -1,44 +1,85 @@
 import { BarNode } from "models/BarNode";
 import { BarNodeArray } from "models/BarNodeArray";
 import { ApplicationStateService } from "./application-state.service";
+import { SpeechText } from "./Create-Array-Speech";
 
 export class GenerateBarNodeArray{
 
-  
-  static  build():BarNode[]
+  static inputNumbers:number[]=[];
+
+  static  buildRandom():void
     {
-        BarNodeArray.length=0;
-     let height = 0;
-        ApplicationStateService.getIsMobileResolution()?  height = 107.4285 :  height = 250;
 
-        
-       
+      GenerateBarNodeArray.inputNumbers.length = 0;
+         let height = 0;
+         ApplicationStateService.getIsMobileResolution()?  height = 107.4285 :  height = 200;
 
-        while(BarNodeArray.length < 20){
+        while(GenerateBarNodeArray.inputNumbers.length < 18){
         var r = (Math.random() * height) + 20;
-        for(let i = 0 ; i< BarNodeArray.length; i++)
+        let flag = true;
+        while(flag)
         {
-          if(BarNodeArray[i].height == r)
+          var r = (Math.random() * height) + 20;
+          let i;
+          for( i = 0 ; i< GenerateBarNodeArray.inputNumbers.length; i++)
           {
-            continue
+            if(GenerateBarNodeArray.inputNumbers[i] == r)
+            {
+              break;
+            }
+          }
+          if(i == GenerateBarNodeArray.inputNumbers.length)
+          {
+            flag = false;
           }
         }
-        BarNodeArray.push({
-          height: r,
-          color: 'N',
-          left: false,
-          right: false,
-          overLeft: false,
-          overRight: false
-        });
-
-        
-         
-         
+        GenerateBarNodeArray.inputNumbers.push(r)
       }
+
+      GenerateBarNodeArray.build()
+      //  let t1 = ""
+      // GenerateBarNodeArray.inputNumbers.map((v)=>{
+      //   t1 = " "+ t1 + Math.floor(v) +", "
+      // })
+      SpeechText.next("Random number input is given")  
+    }
+
+    static build():void{
+
+           BarNodeArray.length=0;
+            for(let i = 0; i< GenerateBarNodeArray.inputNumbers.length; i++){
+              BarNodeArray.push({
+                height: GenerateBarNodeArray.inputNumbers[i],
+                color: 'N',
+                left: false,
+                right: false,
+                overLeft: false,
+                overRight: false
+              });
+            }
+            console.log(BarNodeArray.length,GenerateBarNodeArray.inputNumbers.length)
+
+    }
+
+    static buildManual(input:string):void{
+      // let temp :number[]=JSON.parse(JSON.stringify(input))
+     GenerateBarNodeArray.inputNumbers.length=0;
+      let temp = input.split(',') 
+      for(let i = 0; i<temp.length; i++)
+      {
+       let  v1 = +temp[i]
+        if(GenerateBarNodeArray.inputNumbers.indexOf(v1) != -1)
+        {
+          var r = (Math.random() * 1) + v1;
+          //  v1 =  Number(v1 +r)
+           console.log("ttttttttttttttt"+v1)
+           GenerateBarNodeArray.inputNumbers.push(r)
+        }
+        else{
+          GenerateBarNodeArray.inputNumbers.push(+temp[i])
+        }
        
-        // BarNodeArray.push({color:'N',height:10})
-        
-        return BarNodeArray   
+      }
+      GenerateBarNodeArray.build()
     }
 }

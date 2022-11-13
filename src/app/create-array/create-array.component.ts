@@ -5,6 +5,12 @@ import { AutoFocus } from 'src/app/create-array/autofocus.directive';
 import { Analysis } from 'services/Create-Array-Analysis';
 import { Speech, SpeechText } from 'services/Create-Array-Speech';
 import { CreateArrayValidate } from 'services/Create-Array-Validate';
+import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
+import { Stop } from 'models/Stop';
+import { Deafault } from 'models/Deafault';
+import { SetDefault } from 'models/SetDefault';
+import { sortButton } from 'models/ShowGenerateArray';
+import { Speed } from 'models/Speed';
 @Component({
   selector: 'app-create-array',
   templateUrl: './create-array.component.html',
@@ -13,8 +19,11 @@ import { CreateArrayValidate } from 'services/Create-Array-Validate';
 export class CreateArrayComponent implements OnInit {
 
  sT:string = '';
-
+ valueU:number=Speed[0];
+ default:Deafault[]=SetDefault;
 inputForm:FormGroup ;
+ 
+  showToast: boolean;
   constructor(private ele:ElementRef) { 
    
     this.inputForm = new FormGroup({
@@ -42,12 +51,21 @@ inputForm:FormGroup ;
     
 
   }
+
+
+  yourMethod(v:any):void
+  {
+       //  console.log(v)
+        Speed.length=0
+        Speed.push(v)
+       
+  }
  static  getVoices(text:string) {
    
     document.getElementById("inputArray").focus()
-   
-  
   }
+
+
   onSubmit() {
     
    let  text:any=this.inputForm.controls['inputArray'].value ;
@@ -63,14 +81,48 @@ inputForm:FormGroup ;
     if(speech == "")
     {
       Speech.inputText(Analysis.start(text) as string)
+      sortButton(1);
+      if(Stop[0] == false &&   this.default[0].isRunning==true)
+        {
+          this.default[0].isRunning=false;
+          Stop[0]=true;
+        }
+      {
+          GenerateBarNodeArray.buildManual(text) 
+          console.log("ssssssssssssssssssss"+text)
+        }
     }
     else{
+     
+      // this.inputForm.controls['inputArray'].setValue("|create array here, enter comma seperated numbers")
       Speech.inputText(speech)
+    
     }
   
   }
    
  
   }
+
+  generateArray():void{
+    sortButton(1);
+    if(Stop[0] == false &&   this.default[0].isRunning==true)
+      {
+        this.default[0].isRunning=false;
+        Stop[0]=true;
+      
+      }
+      {
+        GenerateBarNodeArray.buildRandom()  
+      }
+      
+      // sortButton(1);
+     
+   
+  
+    // SpeechText.next("you choose to give random input")  
+     
+  }
+
 
 }
