@@ -211,3 +211,15 @@ animation-duration: 0.8s;
     font-weight: 900;
   
   }
+
+  .hint{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: 'Prompt', sans-serif;
+
+  }

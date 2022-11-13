@@ -28,7 +28,7 @@
         <div class="ai-card">
 
             <div class="ai-speed"  *ngIf="default[0].isRunning==true" >
-                <input [value]="valueU "   type="range" style=" z-index: 10;" min="200" max="1000" #ranger (input)=" yourMethod(ranger.value)">
+                <input [value]="speed[0] "   type="range" style=" z-index: 10;" min="200" max="1000" #ranger (input)=" yourMethod(ranger.value)">
                 <div class="speed-index" >
                   <div class="speed-index-item">0.5x</div>
                   <div class="speed-index-item">1.0x</div>

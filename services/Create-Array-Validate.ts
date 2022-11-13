@@ -15,10 +15,10 @@ export class CreateArrayValidate{
         
         for (let i=0; i<k.length ; i++)
        {
-            if(k[i]=='')
+            if(k[i]=='' || k.length <= 1)
             {
                 console.log("error")
-                return('enter valid input numbers seperated by commas')
+                return('enter atleast 2 valid input numbers seperated by commas')
             }
           else  if(!isNaN(Number(k[i]))) {
                 console.log("string is a number")

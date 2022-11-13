@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { sortButton } from "models/ShowGenerateArray";
+import { GenerateBarNodeArray } from "./GenerateBarNodeArray";
 
 @Injectable()
 export class Analysis{
@@ -112,7 +113,7 @@ static isNearlySame(inputnumbers:number[]):boolean{
     }   
 }
 
- static start(text:string):string{
+ static startManualInput(text:string):string{
 
  let inputnumbers:number[]=[];
  let temp = text.split(',') 
@@ -121,9 +122,62 @@ static isNearlySame(inputnumbers:number[]):boolean{
     inputnumbers.push(+temp[i])
  }
 
- if(inputnumbers.length<8){ return('input is very small so you can use mergesort quicksort insertion sort bubblesort no problem at all')}
- else if( this.isSame(inputnumbers)) { console.log("sameeeeee");  return ('given input is already sorted so you can use insertion sort or merge sort');}
- else if(this.isNearlySame(inputnumbers)){console.log("nearly sameeeeee"); return ('given input is nearly or almost sorted so you can use insertion sort or merge sort');}
- else return ('given input is purely un sorted so you can use quick sort if there is less space in the disk if not you can use  merge sort ');
+ if(inputnumbers.length<8){ return(Analysis.timeComp(inputnumbers)+'')}
+ else if( this.isSame(inputnumbers)) { console.log("sameeeeee");  return (Analysis.timeComp(inputnumbers)+'');}
+ else if(this.isNearlySame(inputnumbers)){console.log("nearly sameeeeee"); return (Analysis.timeComp(inputnumbers)+'');}
+ else return (Analysis.timeComp(inputnumbers)+'');
     }
+
+    static startRandomInput(inputnumbers:number[]):string{
+
+        // let inputnumbers:number[]=[];
+        // let temp = text.split(',') 
+        // for(let i = 0; i<temp.length; i++)
+        // {
+        //    inputnumbers.push(+temp[i])
+        // }
+       
+        if(inputnumbers.length<8){ return(Analysis.timeComp(inputnumbers)+'')}
+        else if( this.isSame(inputnumbers)) { console.log("sameeeeee");  return (Analysis.timeComp(inputnumbers)+'');}
+        else if(this.isNearlySame(inputnumbers)){console.log("nearly sameeeeee"); return (Analysis.timeComp(inputnumbers)+'');}
+        else return (Analysis.timeComp(inputnumbers)+'');
+           }
+
+
+           static timeComp(inputnumbers:number[]):string{
+            let n = inputnumbers.length;
+
+            let sortindex:{} = {0:'merge sort', 1:'quick sort', 2:'bubble sort', 3:'insertion sort', 4:'merge sort or quick sort', 5:'merge sort or insertion sort'}
+            let temp: number[]=[0,0,0,0];
+             temp[0] = Math.round( n*Math.log(n));
+             temp[1]= this.isSame(inputnumbers) || this.isNearlySame(inputnumbers)? Math.round(n*n): Math.round( n*Math.log(n));
+             temp[2]=  Math.round(n*n);
+             temp[3]= this.isSame(inputnumbers) || this.isNearlySame(inputnumbers)? n:  Math.round(n*n);
+            let small = Number.MAX_VALUE;
+            let st = 0;
+            
+            for ( let i =0 ; i < 4; i++)
+            {
+                if ( small > temp[i])
+                {
+                    small = temp[i]
+                    st = i;
+                }
+                   
+            }
+
+            if(temp[0] == temp[1])
+            {
+                st = 4;
+            }
+            if(temp[0] == temp[3])
+            {
+                st = 5;
+            }
+            
+            return (
+                "Best Time complexity of given input is " +" "+ small+" "+"use" + " "+sortindex[st] +" "
+              
+            )
+           }
 }

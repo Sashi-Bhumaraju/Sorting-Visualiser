@@ -22,6 +22,7 @@ export class CreateArrayComponent implements OnInit {
  valueU:number=Speed[0];
  default:Deafault[]=SetDefault;
 inputForm:FormGroup ;
+speed:number[]=Speed
  
   showToast: boolean;
   constructor(private ele:ElementRef) { 
@@ -80,7 +81,7 @@ inputForm:FormGroup ;
     let speech = CreateArrayValidate.validateArray(text);
     if(speech == "")
     {
-      Speech.inputText(Analysis.start(text) as string)
+      Speech.inputText(Analysis.startManualInput(text) as string)
       sortButton(1);
       if(Stop[0] == false &&   this.default[0].isRunning==true)
         {
@@ -114,6 +115,7 @@ inputForm:FormGroup ;
       }
       {
         GenerateBarNodeArray.buildRandom()  
+        Speech.inputText(Analysis.startRandomInput(GenerateBarNodeArray.inputNumbers) as string)
       }
       
       // sortButton(1);
