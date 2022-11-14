@@ -83,6 +83,7 @@ export class Algorithms{
                 isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
                 
             })
+            Stop[0]=false;
             return 
            }
           j++;
@@ -156,6 +157,7 @@ export class Algorithms{
                   isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
                   
               })
+              Stop[0]=false;
               return;
             }
             BarNodeArray[j+1].color = 'G';
@@ -368,12 +370,12 @@ console.log(BarNodeArray,"sashi")
           GenerateBarNodeArray.build()    
           return
         }  
-        console.log(currentIndex,targetIndex, + "lllllllllllllllllllllllll")
+        // console.log(currentIndex,targetIndex, + "lllllllllllllllllllllllll")
         if(targetIndex !== currentIndex)
         {
           BarNodeArray[currentIndex].color='P';
           BarNodeArray[currentIndex].right = true;
-          console.log(targetIndex+" "+currentIndex+"mmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+          // console.log(targetIndex+" "+currentIndex+"mmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
           currentIndex-1!=0?  BarNodeArray[currentIndex-1].right = false: null;
           BarNodeArray[currentIndex-1].left=true
 
@@ -407,6 +409,7 @@ console.log(BarNodeArray,"sashi")
                 isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
                 
             })
+            Stop[0]=false;
             return;
           }
           targetIndex =animationArray[n][0];
@@ -535,6 +538,7 @@ console.log(BarNodeArray)
                 isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
                 
             })
+            Stop[0]=false;
             return;
           }
 
