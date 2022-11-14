@@ -69,16 +69,12 @@ export class MobileBottomNavvComponent implements OnInit {
       this.default[0].isBubbleSort = true;
       Algorithms.bubbleSort();
             break;}
-
     }
-
   }
 
+
   buildNewArray():void{
-
-
-  
-
+    
     if( this.default[0].isRunning)
       {
         this.showToast=true

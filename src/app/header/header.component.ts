@@ -126,10 +126,8 @@ sortIt():void{
       else{
         this.buildNewArray()
       }
-      
-      sortButton(0);
+      sortButton(0); 
       this.i=0;
-   
      
     }
   }
