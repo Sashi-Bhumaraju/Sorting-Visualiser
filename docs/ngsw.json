@@ -1,0 +1,125 @@
+{
+  "configVersion": 1,
+  "timestamp": 1668429618452,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.c356e6cff5407db0.js",
+        "/manifest.webmanifest",
+        "/polyfills.7b70026fd9e99727.js",
+        "/runtime.810c12be0ec93cb6.js",
+        "/styles.b51eae97ec1da13d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/all.css",
+        "/assets/dog.wav",
+        "/assets/facebook.svg",
+        "/assets/google.svg",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/instagram.svg",
+        "/assets/plus.svg",
+        "/assets/random.svg",
+        "/assets/right.svg",
+        "/assets/robot.svg",
+        "/assets/sasi.jpg",
+        "/assets/think.svg",
+        "/assets/think2.svg",
+        "/assets/tv.png",
+        "/assets/twitter.svg",
+        "/assets/webfonts/fa-brands-400.ttf",
+        "/assets/webfonts/fa-brands-400.woff2",
+        "/assets/webfonts/fa-regular-400.ttf",
+        "/assets/webfonts/fa-regular-400.woff2",
+        "/assets/webfonts/fa-solid-900.ttf",
+        "/assets/webfonts/fa-solid-900.woff2",
+        "/assets/webfonts/fa-v4compatibility.ttf",
+        "/assets/webfonts/fa-v4compatibility.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/all.css": "1620b3bf8fd47218130e7458d067f7d2eab7cdff",
+    "/assets/dog.wav": "743b692e7fc794a1bbf85d2bd4a17711079f702c",
+    "/assets/facebook.svg": "46b6c6f4901044036b5b61d4d7de35e5a8280bef",
+    "/assets/google.svg": "c28764e8abf37127495ef9633c338344646b5b7e",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/instagram.svg": "bc6bed9c83b9b7cfe07984aa42a49d9dcddae1d4",
+    "/assets/plus.svg": "e56e1e90d4d507eec027880b5c70579f51c44e74",
+    "/assets/random.svg": "6caafe65d4bb53b2ac3e24d2caac2e4835a6ea9f",
+    "/assets/right.svg": "7bb8cdfb8aaa9baf5c2c6d1bd3382550e22a8514",
+    "/assets/robot.svg": "1a840d23209f77f2c9846414f2bc1f9cebf4bfd3",
+    "/assets/sasi.jpg": "739e1f5a96f43b134e9325b69d6de7d602fa7c91",
+    "/assets/think.svg": "44232caf0f5f16cc2cc98482d018eaae87f82498",
+    "/assets/think2.svg": "81d72a7f29013786140723c068d4613642021e45",
+    "/assets/tv.png": "cd2db510ae5d940cb2bc66b46843513adf5db498",
+    "/assets/twitter.svg": "a099a8af647d3f9f2534eed779c9bc838ec7353d",
+    "/assets/webfonts/fa-brands-400.ttf": "42350ed503d66ae23a9c68d38966f25bc3007319",
+    "/assets/webfonts/fa-brands-400.woff2": "380bea4e9eb484d835d89cc608f2af7c3179e8a4",
+    "/assets/webfonts/fa-regular-400.ttf": "9262ea1d0711b658bb75d5cbe9345e080c7dea90",
+    "/assets/webfonts/fa-regular-400.woff2": "56be4c28de7c67747b0fe3dd606be8b319f6d4f4",
+    "/assets/webfonts/fa-solid-900.ttf": "d2caaf5ce75d0da13ace325e24f7aa7079ef1891",
+    "/assets/webfonts/fa-solid-900.woff2": "a7fca574d24e9ffa5ee0e0589ffe17277ae4ec27",
+    "/assets/webfonts/fa-v4compatibility.ttf": "b12c2b515fb62c370de1af4ca99635b00aabfe58",
+    "/assets/webfonts/fa-v4compatibility.woff2": "9e1f957bf329bd280aba89e578420301b312403d",
+    "/favicon.ico": "cdfe4f1da7f825daa97bf603bdd7f209e75b43d5",
+    "/index.html": "d64cb6903c00157152037b0fed2c230c26b8da3f",
+    "/main.c356e6cff5407db0.js": "0342e2e929ae6e81cbe180745c117661b50e0a38",
+    "/manifest.webmanifest": "6274270ffaca2c7846ca635a734826beab9d5881",
+    "/polyfills.7b70026fd9e99727.js": "7a39800dc16ea2c454d71794384633a89c5fc9f8",
+    "/runtime.810c12be0ec93cb6.js": "2973f5a3929384d7e32bada20c0c7dfeac41bdd0",
+    "/styles.b51eae97ec1da13d.css": "3bf9d5d8551d4c63579f17bd4622fb287c64f7c7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
