@@ -14,7 +14,7 @@ export class GenerateBarNodeArray{
          let height = 0;
          ApplicationStateService.getIsMobileResolution()?  height = 107.4285 :  height = 200;
 
-        while(GenerateBarNodeArray.inputNumbers.length < 18){
+        while(GenerateBarNodeArray.inputNumbers.length < 15){
         var r = (Math.random() * height) + 20;
         let flag = true;
         while(flag)
@@ -36,7 +36,7 @@ export class GenerateBarNodeArray{
         GenerateBarNodeArray.inputNumbers.push(r)
       }
 
-      GenerateBarNodeArray.build()
+      // GenerateBarNodeArray.build()
       //  let t1 = ""
       // GenerateBarNodeArray.inputNumbers.map((v)=>{
       //   t1 = " "+ t1 + Math.floor(v) +", "
@@ -80,6 +80,6 @@ export class GenerateBarNodeArray{
         }
        
       }
-      GenerateBarNodeArray.build()
+      // GenerateBarNodeArray.build()
     }
 }

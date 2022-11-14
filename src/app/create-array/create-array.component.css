@@ -62,7 +62,7 @@
 
 
 .input-box{
-    width: 360px;
+    width: calc((100vw / 100 ) * 27) ;
     /* margin: 15px; */
     /* border-radius: 20px; */
     margin-left: 30px;

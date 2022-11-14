@@ -7,7 +7,7 @@ import { SGA, sortButton } from 'models/ShowGenerateArray';
 import { Tip } from 'models/ShowTip';
 import { Tv } from 'models/ShowTv';
 import { Speed, stopTipp } from 'models/Speed';
-import { Stop } from 'models/Stop';
+import { SortNumber, Stop } from 'models/Stop';
 // import { ShowTip } from 'models/ShowTip';
 import { from, of } from 'rxjs';
 import { Algorithms } from 'services/Algorithms';
@@ -102,14 +102,16 @@ sortIt():void{
 
 
   buildNewArray():void{
-    if( this.default[0].isRunning)
-      {
-        this.showToast=true
-        setTimeout(()=>{ this.showToast=false},2500);
-      }
-    else {
-            GenerateBarNodeArray.build()    
-      }
+    GenerateBarNodeArray.build()    
+    // if( this.default[0].isRunning)
+    //   {
+    //     this.showToast=true
+    //     setTimeout(()=>{ this.showToast=false},2500);
+    //   }
+    // else {
+            
+    //         GenerateBarNodeArray.build()    
+    //   }
   }
 
 
@@ -118,13 +120,24 @@ sortIt():void{
    
     {
      
-      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      if( SetDefault[0].isRunning == true)
       {
-        this.default[0].isRunning=false;
+        // this.default[0].isRunning=false;
+        // SetDefault[0].isRunning = true
+        SortNumber[0]=0;
         Stop[0]=true;
+
       }
       else{
+        SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+        SetDefault[0].isRunning = true
+        SetDefault[0].isMergeSort= true;
         this.buildNewArray()
+        Algorithms.mergeSort();
       }
       sortButton(0); 
       this.i=0;
@@ -135,19 +148,30 @@ sortIt():void{
 
   quickSort():void{
    
+  
     {
-      if(Stop[0] == false &&   this.default[0].isRunning==true)
+     
+      if( SetDefault[0].isRunning == true)
       {
-        this.default[0].isRunning=false;
+        // this.default[0].isRunning=false;
+        // SetDefault[0].isRunning = true
+        SortNumber[0]=1;
         Stop[0]=true;
       }
       else{
+        SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+        SetDefault[0].isRunning = true
+        SetDefault[0].isQuickSort= true;
         this.buildNewArray()
+        Algorithms.quickSort();
       }
       sortButton(0); 
       this.i=1;
-    
-    
+     
     }
   }
   
@@ -155,17 +179,27 @@ sortIt():void{
   insertionSort():void{
    
     {
-      if(Stop[0] == false &&   this.default[0].isRunning==true)
+     
+      if( SetDefault[0].isRunning == true)
       {
-        this.default[0].isRunning=false;
+        // this.default[0].isRunning=false;
+        // SetDefault[0].isRunning = true
+        SortNumber[0]=3;
         Stop[0]=true;
       }
       else{
+        SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+        SetDefault[0].isRunning = true
+        SetDefault[0].isInsertionSort= true;
         this.buildNewArray()
+        Algorithms.insertionSort();
       }
-      sortButton(0);
+      sortButton(0); 
       this.i=3;
-   
      
     }
   }
@@ -173,17 +207,27 @@ sortIt():void{
   bubbleSort():void{
    
     {
-      if(Stop[0] == false &&   this.default[0].isRunning==true)
+     
+      if( SetDefault[0].isRunning == true)
       {
-        this.default[0].isRunning=false;
+        // this.default[0].isRunning=false;
+        // SetDefault[0].isRunning = true
+        SortNumber[0]=2;
         Stop[0]=true;
       }
       else{
+        SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+        SetDefault[0].isRunning = true
+        SetDefault[0].isBubbleSort= true;
         this.buildNewArray()
+        Algorithms.bubbleSort();
       }
-      sortButton(0);
+      sortButton(0); 
       this.i=2;
-     
      
     }
  }

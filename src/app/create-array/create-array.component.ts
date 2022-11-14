@@ -6,7 +6,7 @@ import { Analysis } from 'services/Create-Array-Analysis';
 import { Speech, SpeechText } from 'services/Create-Array-Speech';
 import { CreateArrayValidate } from 'services/Create-Array-Validate';
 import { GenerateBarNodeArray } from 'services/GenerateBarNodeArray';
-import { Stop } from 'models/Stop';
+import { FullStop, Stop } from 'models/Stop';
 import { Deafault } from 'models/Deafault';
 import { SetDefault } from 'models/SetDefault';
 import { sortButton } from 'models/ShowGenerateArray';
@@ -83,13 +83,16 @@ speed:number[]=Speed
     {
       Speech.inputText(Analysis.startManualInput(text) as string)
       sortButton(1);
-      if(Stop[0] == false &&   this.default[0].isRunning==true)
+      if( SetDefault[0].isRunning==true)
         {
-          this.default[0].isRunning=false;
-          Stop[0]=true;
+          GenerateBarNodeArray.buildManual(text) 
+         FullStop[0]=true;
+         
         }
+        else
       {
           GenerateBarNodeArray.buildManual(text) 
+          GenerateBarNodeArray.build();
           console.log("ssssssssssssssssssss"+text)
         }
     }
@@ -107,16 +110,20 @@ speed:number[]=Speed
 
   generateArray():void{
     sortButton(1);
-    if(Stop[0] == false &&   this.default[0].isRunning==true)
-      {
-        this.default[0].isRunning=false;
-        Stop[0]=true;
-      
-      }
+   
+    if( SetDefault[0].isRunning==true)
+    {
+      GenerateBarNodeArray.buildRandom()  
+     FullStop[0]=true;
+     
+    }
+    else
       {
         GenerateBarNodeArray.buildRandom()  
-        Speech.inputText(Analysis.startRandomInput(GenerateBarNodeArray.inputNumbers) as string)
+        GenerateBarNodeArray.build();
+       
       }
+      Speech.inputText(Analysis.startRandomInput(GenerateBarNodeArray.inputNumbers) as string)
       
       // sortButton(1);
      

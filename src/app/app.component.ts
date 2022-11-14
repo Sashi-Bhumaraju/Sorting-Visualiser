@@ -19,7 +19,7 @@ export class AppComponent  {
   @HostListener('window:resize', ['$event'])
   onResize(event:any){
 
-    if (window.innerWidth < 950) {
+    if (window.innerWidth < 700) {
       this.isM= true;
      
     } else {

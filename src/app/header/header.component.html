@@ -2,12 +2,12 @@
 
     <div class="header-bar" >
 
-   
+      <div class="logo" >SORTING VISUALISER</div>
       <table>
         <tr>
-          <td>  <div class="logo" >SORTING VISUALISER</div></td>
-          <td>   <div [ngClass]="  ['buildNewArray',   'animate__animated',  showGenerateArrayButton[0]?  'animate__flipInX' : 'null',   showGenerateArrayButton[1]?  'animate__flipOutX' : 'null' ]  "   [ngStyle]="{ 'cursor' : 'pointer'}"   (click)="sortIt()">Sort!</div>
-          </td>
+          <!-- <td>  <div class="logo" >SORTING VISUALISER</div></td>
+          <td>   <div *ngIf="false" [ngClass]="  ['buildNewArray',   'animate__animated',  showGenerateArrayButton[0]?  'animate__flipInX' : 'null',   showGenerateArrayButton[1]?  'animate__flipOutX' : 'null' ]  "   [ngStyle]="{ 'cursor' : 'pointer'}"   (click)="sortIt()">Sort!</div>
+          </td> -->
           <td>  <div class="sortType" [ngStyle]="{'color':(i==0 && showGenerateArrayButton[0])?   'darkmagenta':'black','font-weight':(i==0 && showGenerateArrayButton[0])?   'bold':'normal'}" (click)="mergeSort()">Merge </div>
           </td>
           <td>  <div class="sortType"  [ngStyle]="{'color':(i==1 && showGenerateArrayButton[0])?   'darkmagenta':'black','font-weight':(i==1 && showGenerateArrayButton[0])?   'bold':'normal'}" (click)="quickSort()">Quick </div>

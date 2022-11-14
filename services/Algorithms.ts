@@ -6,7 +6,7 @@ import { BarNodeArray } from "models/BarNodeArray"
 import { SetDefault } from "models/SetDefault";
 import { SGA, sortButton } from "models/ShowGenerateArray";
 import { AnimateDistance, Speed } from "models/Speed";
-import { Stop } from "models/Stop";
+import { FullStop, SortNumber, Stop } from "models/Stop";
 import { from, partition, repeat } from "rxjs";
 import { HeaderComponent } from "src/app/header/header.component";
 import { ApplicationStateService } from "./application-state.service";
@@ -14,7 +14,17 @@ import { GenerateBarNodeArray } from "./GenerateBarNodeArray";
 
 export class Algorithms{
 
+static selectSort(i:number)
+{
+  switch(i)
+  {
+    case 0:Algorithms.mergeSort(); break;
+    case 1:Algorithms.quickSort(); break;
+    case 2:Algorithms.bubbleSort(); break;
+    case 3:Algorithms.insertionSort(); break;
 
+  }
+}
 // Bubble sort
     static bubbleSort():void{
       // let  i:number = 0;
@@ -29,10 +39,29 @@ export class Algorithms{
         // console.log("inside reat"+l)
         setTimeout(()=>
         {
-
+          if(FullStop[0] == true)
+          {
+            FullStop[0]=false;
+            SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+            GenerateBarNodeArray.build();
+            return
+          }
         if( Stop[0] == true ){
         Stop[0]=false;
-          GenerateBarNodeArray.build()    
+        SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+        SetDefault[0].isRunning=true
+        SetDefault[0].isBubbleSort= true;
+        GenerateBarNodeArray.build()   
+        Algorithms.selectSort(SortNumber[0])
+      
           return
         }  
 
@@ -109,9 +138,28 @@ export class Algorithms{
          
 
         setTimeout(()=>{
+          if(FullStop[0] == true)
+          {
+            FullStop[0]=false;
+            SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+            GenerateBarNodeArray.build();
+            return
+          }
           if( Stop[0] == true ){
           Stop[0]=false;
-          GenerateBarNodeArray.build()    
+          SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+          SetDefault[0].isRunning=true
+          SetDefault[0].isInsertionSort= true;
+          GenerateBarNodeArray.build()   
+          Algorithms.selectSort(SortNumber[0])
             return
           }  
          
@@ -364,10 +412,29 @@ console.log(BarNodeArray,"sashi")
 
    ( function repeat(){
       setTimeout(()=>{
+        if(FullStop[0] == true)
+        {
+          FullStop[0]=false;
+          SetDefault.length = 0;
+          SetDefault.push({
+              isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+              
+          })
+          GenerateBarNodeArray.build();
+          return
+        }
         if( Stop[0] == true ){
           Stop[0]=false;
-        
-          GenerateBarNodeArray.build()    
+          SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+          SetDefault[0].isRunning=true
+          SetDefault[0].isMergeSort= true;
+          GenerateBarNodeArray.build()   
+          Algorithms.selectSort(SortNumber[0])
+
           return
         }  
         // console.log(currentIndex,targetIndex, + "lllllllllllllllllllllllll")
@@ -520,10 +587,29 @@ console.log(BarNodeArray)
    function repeat():void{
 
         setTimeout(()=>{
+          if(FullStop[0] == true)
+          {
+            FullStop[0]=false;
+            SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+            GenerateBarNodeArray.build();
+            return;
+          }
           if( Stop[0] == true )
           {
           Stop[0]=false;
-          GenerateBarNodeArray.build()    
+          SetDefault.length = 0;
+            SetDefault.push({
+                isBubbleSort: false, isBuildNewArray: true, isInsertionSort: false, isMergeSort: false, isQuickSort: false, isRunning: false,
+                
+            })
+          SetDefault[0].isRunning=true
+          SetDefault[0].isQuickSort= true;
+          GenerateBarNodeArray.build()   
+          Algorithms.selectSort(SortNumber[0])
             return
           }  
     
